@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>legendary_crafter</name>
+  </assembly>
+  <members>
+    <member name="T:legendary_crafter.matGift">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>T:legendary_crafter.matGift</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:legendary_crafter.matGift.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>legendary_crafter.matGift</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:legendary_crafter.matGift.item">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:legendary_crafter.matGift.item</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:legendary_crafter.matGift.item1">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:legendary_crafter.matGift.item1</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:legendary_crafter.matGift.item2">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:legendary_crafter.matGift.item2</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:legendary_crafter.matGift.item3">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:legendary_crafter.matGift.item3</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:legendary_crafter.matGift.name">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:legendary_crafter.matGift.name</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+  </members>
+</doc>

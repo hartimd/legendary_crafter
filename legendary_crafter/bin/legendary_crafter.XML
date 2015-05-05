@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>legendary_crafter</name>
+    </assembly>
+    <members>
+        <member name="M:legendary_crafter.DungeonStore.GetByCode(System.String)">
+            <summary>
+            Gets the dungeon from the data base.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:legendary_crafter.Form1">
+            <summary>
+            The core of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_clover">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_ecto">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_skill">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_honor">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_obsi">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_totem">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_dust">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_venom">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_blood">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_token">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_ritem1">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_ritem2">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_ritem3">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_mitem1">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_mitem2">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_mitem3">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_mitem4">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_runestone">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_bone">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_scale">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_claws">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.i_fangs">
+            <summary>
+            Input and output integers of the application.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_pre">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mastery">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_fortune">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_legy">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_tot">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_magic">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_totem">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_dust">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_venom">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_blood">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_might">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_bone">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_scale">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_claws">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_fangs">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_recipe">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_dungeon">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_ritem1">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_ritem2">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_ritem3">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mats">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mitem1">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mitem2">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mitem3">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_mitem4">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_sigil">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_runestones">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_ecto">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_clover">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_bloodstone">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_battle">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_explo">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.perc_obsi">
+            <summary>
+            Doubles resulting of the calculation.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.Recipe">
+            <summary>
+            The strings needed to switch in between the different legendaries, gifts etc.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.Mats">
+            <summary>
+            The strings needed to switch in between the different legendaries, gifts etc.
+            </summary>
+        </member>
+        <member name="F:legendary_crafter.Form1.Abbr">
+            <summary>
+            The strings needed to switch in between the different legendaries, gifts etc.
+            </summary>
+        </member>
+        <member name="M:legendary_crafter.Form1.comboBox_legy_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectedIndexChanged event of the comboBox_legy control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.getTextbox(System.Windows.Forms.TextBox,System.Int32)">
+            <summary>
+            Parses the value of the given TextBox into integer and checks if its greater than or equal to 0.
+            </summary>
+            <param name="textBox">Unique name of the TextBox.</param>
+            <param name="item">Value of the TextBox's item.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.labelCheckBox(System.String,System.String)">
+            <summary>
+            Sets the labels specific of the legendary.
+            </summary>
+            <param name="id">Gets the identifiator of the legendary.</param>
+            <param name="dungeon">Gets the identificator of the dungeon specific to the legendary.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.labelMats(System.String)">
+            <summary>
+            Sets the <c>Label.Text</c> to the value taken from the data base.
+            </summary>
+            <param name="name">Value of the specific label.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.labelRecipe(System.String)">
+            <summary>
+            Sets the <c>Label.Text</c> to the value taken from the data base.
+            </summary>
+            <param name="id">Identifier of the specific label.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.setDungeon(System.String)">
+            <summary>
+            Sets the labels specific to the dungeon, based on the <c>abbr parameter</c>.
+            </summary>
+            <param name="Abbr">Identifier of the dungeon.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.setMax(System.Int32,System.Int32)">
+            <summary>
+            Checks if the given input is larger then the needed amount and if so, sets the input equal to the needed amount. Also checks if input is less than 0 and if so set it equal to 0.
+            </summary>
+            <param name="i">Input.</param>
+            <param name="l">Needed amount.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.sumDivide(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Sums the percentage of the four parts of the specific gift up and divides by four, to achieve percent.
+            </summary>
+            <param name="perc">Result.</param>
+            <param name="sum1">First part of the sum.</param>
+            <param name="sum2">Second part of the sum.</param>
+            <param name="sum3">Third part of the sum.</param>
+            <param name="sum4">Forth part of the sum.</param>
+            <returns></returns>
+        </member>
+        <member name="M:legendary_crafter.Form1.toPercent(System.Double,System.Int32,System.Int32)">
+            <summary>
+            Calculates the percentage of the specific item and checks if needed amount is equal to NULL.
+            </summary>
+            <param name="p">Result of the calculation.</param>
+            <param name="i">Input, given by TextBoxes.</param>
+            <param name="x">Needed amount of items.</param>
+        </member>
+        <member name="F:legendary_crafter.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:legendary_crafter.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:legendary_crafter.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:legendary_crafter.recipeBook.GetByID(System.String)">
+            <summary>
+            Gets the specific gift to craft the Gift of the Legendary from the data base.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:legendary_crafter.legyList.GetLegy(System.String)">
+            <summary>
+            Gets the legendary from the data base.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:legendary_crafter.MatStore.GetByName(System.String)">
+            <summary>
+            Gets the Gift of Material from the data base.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:legendary_crafter.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:legendary_crafter.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:legendary_crafter.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:legendary_crafter.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
