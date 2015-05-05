@@ -3,32 +3,50 @@ using System.Linq;
 
 namespace legendary_crafter
 {
-    public class matGift
+    /// <summary>
+    /// Defines the parameter of the constructors for the Gifts of Materials.
+    /// </summary>
+    internal class matGift
     {
+        /// <summary>
+        /// Sets the name of the Gift of Material.
+        /// </summary>
         public string name
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// First ingredient of the Gift of Material.
+        /// </summary>
         public string item
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Second ingredient of the Gift of Material.
+        /// </summary>
         public string item1
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Third ingredient of the Gift of Material.
+        /// </summary>
         public string item2
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Fourth ingredient of the Gift of Material.
+        /// </summary>
         public string item3
         {
             get;

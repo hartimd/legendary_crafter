@@ -63,7 +63,7 @@
             this.textBox_fangs = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label_claws = new System.Windows.Forms.Label();
-            this.textBox_claw = new System.Windows.Forms.TextBox();
+            this.textBox_claws = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label_scale = new System.Windows.Forms.Label();
             this.textBox_scale = new System.Windows.Forms.TextBox();
@@ -473,10 +473,10 @@
             // 
             // textBox_claw
             // 
-            this.textBox_claw.Location = new System.Drawing.Point(508, 431);
-            this.textBox_claw.Name = "textBox_claw";
-            this.textBox_claw.Size = new System.Drawing.Size(37, 20);
-            this.textBox_claw.TabIndex = 45;
+            this.textBox_claws.Location = new System.Drawing.Point(508, 431);
+            this.textBox_claws.Name = "textBox_claw";
+            this.textBox_claws.Size = new System.Drawing.Size(37, 20);
+            this.textBox_claws.TabIndex = 45;
             // 
             // label18
             // 
@@ -1037,7 +1037,7 @@
             this.Controls.Add(this.textBox_fangs);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label_claws);
-            this.Controls.Add(this.textBox_claw);
+            this.Controls.Add(this.textBox_claws);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label_scale);
             this.Controls.Add(this.textBox_scale);
@@ -1126,7 +1126,7 @@
         private System.Windows.Forms.TextBox textBox_fangs;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label_claws;
-        private System.Windows.Forms.TextBox textBox_claw;
+        private System.Windows.Forms.TextBox textBox_claws;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label_scale;
         private System.Windows.Forms.TextBox textBox_scale;

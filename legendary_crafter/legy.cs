@@ -3,38 +3,59 @@ using System.Linq;
 
 namespace legendary_crafter
 {
+    /// <summary>
+    /// Defines the parameter of the constructors for the legendaries.
+    /// </summary>
     internal class legy
     {
+        /// <summary>
+        /// Sets an unique and whitespace-free identificator for each legendary.
+        /// </summary>
         public string id
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Sets the name of the legendary.
+        /// </summary>
         public string name
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Sets the Precursor weapon of the legendary.
+        /// </summary>
         public string pre
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Sets an indentifier of the specific gift needed to craft the unique Gift of the Legendary.
+        /// </summary>
         public string recipeGift
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Sets an indentifier of the specific Gift of Material needed to craft the unique Gift of the Legendary.
+        /// </summary>
         public string matsGift
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Sets the Sigil, needed to craft the legendary.
+        /// </summary>
         public string sigil
         {
             get;
