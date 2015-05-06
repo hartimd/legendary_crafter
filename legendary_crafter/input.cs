@@ -21,10 +21,11 @@ namespace legendary_crafter
             set;
         }
 
-        public input setInput(TextBox textBox)
+        public void setInput(TextBox textBox)
         {
-            Int32.TryParse(textBox.Text, out i_value);
-            this.i_value = i_value;
+            this.i_value = Int32.TryParse(textBox.Text);
+            //Int32.TryParse(textBox.Text, out i_value);
+            //this.i_value = i_value;
         }
     }
 }
