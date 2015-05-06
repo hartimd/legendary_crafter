@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DungeonGift;
+using legendary;
+using matGift;
+using recipeGift;
+using System;
 using System.Windows.Forms;
 
 namespace legendary_crafter
@@ -13,9 +17,9 @@ namespace legendary_crafter
         public string[] legys = { legyList.GetLegy("bifr").name, legyList.GetLegy("bolt").name, legyList.GetLegy("flam").name, legyList.GetLegy("fren").name, legyList.GetLegy("fros").name, legyList.GetLegy("howl").name, legyList.GetLegy("inci").name, legyList.GetLegy("jugg").name, legyList.GetLegy("kamo").name, legyList.GetLegy("krai").name, legyList.GetLegy("kudz").name, legyList.GetLegy("mete").name, legyList.GetLegy("moot").name, legyList.GetLegy("quip").name, legyList.GetLegy("rodg").name, legyList.GetLegy("sunr").name, legyList.GetLegy("drea").name, legyList.GetLegy("mins").name, legyList.GetLegy("pred").name, legyList.GetLegy("twil").name };
 
         /// <summary>
-        /// Doubles resulting of the calculation.
+        /// decimals resulting of the calculation.
         /// </summary>
-        public double perc_pre, perc_mastery, perc_fortune, perc_legy, perc_tot, perc_magic, perc_totem, perc_dust, perc_venom, perc_blood, perc_might, perc_bone, perc_scale, perc_claws, perc_fangs, perc_recipe, perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3, perc_mats, perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4, perc_sigil, perc_runestones, perc_ecto, perc_clover, perc_bloodstone, perc_battle, perc_explo, perc_obsi;
+        public decimal perc_pre, perc_mastery, perc_fortune, perc_legy, perc_tot, perc_magic, perc_totem, perc_dust, perc_venom, perc_blood, perc_might, perc_bone, perc_scale, perc_claws, perc_fangs, perc_recipe, perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3, perc_mats, perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4, perc_sigil, perc_runestones, perc_ecto, perc_clover, perc_bloodstone, perc_battle, perc_explo, perc_obsi;
 
         public string Mats, Abbr;
 
@@ -289,13 +293,13 @@ namespace legendary_crafter
             }
             if (checkBox_mastery.Checked == true)
             {
-                perc_mastery = 100.0;
+                perc_mastery = 100.0m;
             }
             else
             {
                 if (checkBox_bloodstone.Checked == true)
                 {
-                    perc_bloodstone = 100.0;
+                    perc_bloodstone = 100.0m;
                 }
                 else
                 {
@@ -303,7 +307,7 @@ namespace legendary_crafter
                 }
                 if (checkBox_battle.Checked == true)
                 {
-                    perc_battle = 100.0;
+                    perc_battle = 100.0m;
                 }
                 else
                 {
@@ -311,24 +315,24 @@ namespace legendary_crafter
                 }
                 if (checkBox_explo.Checked == true)
                 {
-                    perc_explo = 100.0;
+                    perc_explo = 100.0m;
                 }
                 else
                 {
-                    perc_explo = 0.0;
+                    perc_explo = 0.0m;
                 }
                 toPercent(perc_obsi, i_obsi, mats_item_value);
                 sumDivide(perc_mastery, perc_bloodstone, perc_battle, perc_explo, perc_obsi);
             }
             if (checkBox_fortune.Checked == true)
             {
-                perc_fortune = 100.0;
+                perc_fortune = 100.0m;
             }
             else
             {
                 if (checkBox_magic.Checked == true)
                 {
-                    perc_magic = 100.0;
+                    perc_magic = 100.0m;
                 }
                 else
                 {
@@ -340,7 +344,7 @@ namespace legendary_crafter
                 }
                 if (checkBox_might.Checked == true)
                 {
-                    perc_might = 100.0;
+                    perc_might = 100.0m;
                 }
                 else
                 {
@@ -356,19 +360,19 @@ namespace legendary_crafter
             }
             if (checkBox_gift.Checked == true)
             {
-                perc_legy = 100.0;
+                perc_legy = 100.0m;
             }
             else
             {
                 if (checkBox_recipe_gift.Checked == true)
                 {
-                    perc_recipe = 100.0;
+                    perc_recipe = 100.0m;
                 }
                 else
                 {
                     if (checkBox_dungeon_gift.Checked == true)
                     {
-                        perc_dungeon = 100.0;
+                        perc_dungeon = 100.0m;
                     }
                     else
                     {
@@ -381,7 +385,7 @@ namespace legendary_crafter
                 }
                 if (checkBox_mats_gift.Checked == true)
                 {
-                    perc_mats = 100.0;
+                    perc_mats = 100.0m;
                 }
                 else
                 {
@@ -393,11 +397,11 @@ namespace legendary_crafter
                 }
                 if (checkBox_sigil.Checked == true)
                 {
-                    perc_sigil = 100.0;
+                    perc_sigil = 100.0m;
                 }
                 else
                 {
-                    perc_sigil = 0.0;
+                    perc_sigil = 0.0m;
                 }
                 toPercent(perc_runestones, i_runestone, l_runestone);
                 sumDivide(perc_legy, perc_recipe, perc_mats, perc_sigil, perc_runestones);
@@ -500,7 +504,7 @@ namespace legendary_crafter
         /// <param name="sum3">Third part of the sum.</param>
         /// <param name="sum4">Fourth part of the sum.</param>
         /// <returns></returns>
-        private double sumDivide(double perc, double sum1, double sum2, double sum3, double sum4)
+        private decimal sumDivide(decimal perc, decimal sum1, decimal sum2, decimal sum3, decimal sum4)
         {
             return perc = (sum1 + sum2 + sum3 + sum4) / 4;
         }
@@ -511,10 +515,10 @@ namespace legendary_crafter
         /// <param name="p">Result of the calculation.</param>
         /// <param name="i">Input, given by TextBoxes.</param>
         /// <param name="x">Needed amount of items.</param>
-        private double toPercent(double p, int i, int x)
+        private decimal toPercent(decimal p, int i, int x)
         {
             setMax(i, x);
-            p = (i / x) * 100.0;
+            p = (i / x) * 100.0m;
             return p;
         }
     }

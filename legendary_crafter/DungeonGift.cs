@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace legendary_crafter
+namespace DungeonGift
 {
     internal class DungeonGift
     {

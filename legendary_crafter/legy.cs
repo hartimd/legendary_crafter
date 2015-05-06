@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using matGift;
+using recipeGift;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace legendary_crafter
+namespace legendary
 {
     /// <summary>
     /// Defines the parameter of the constructors for the legendaries.

@@ -4,7 +4,7 @@
         <name>legendary_crafter</name>
     </assembly>
     <members>
-        <member name="M:legendary_crafter.DungeonStore.GetByCode(System.String)">
+        <member name="M:DungeonGift.DungeonStore.GetByCode(System.String)">
             <summary>
             Gets the dungeon from the data base.
             </summary>
@@ -18,167 +18,167 @@
         </member>
         <member name="F:legendary_crafter.Form1.perc_pre">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mastery">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_fortune">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_legy">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_tot">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_magic">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_totem">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_dust">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_venom">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_blood">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_might">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_bone">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_scale">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_claws">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_fangs">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_recipe">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_dungeon">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_ritem1">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_ritem2">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_ritem3">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mats">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mitem1">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mitem2">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mitem3">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_mitem4">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_sigil">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_runestones">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_ecto">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_clover">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_bloodstone">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_battle">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_explo">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="F:legendary_crafter.Form1.perc_obsi">
             <summary>
-            Doubles resulting of the calculation.
+            decimals resulting of the calculation.
             </summary>
         </member>
         <member name="M:legendary_crafter.Form1.button_calc_Click(System.Object,System.EventArgs)">
@@ -249,7 +249,7 @@
             <param name="i">Input.</param>
             <param name="x">Needed amount.</param>
         </member>
-        <member name="M:legendary_crafter.Form1.sumDivide(System.Double,System.Double,System.Double,System.Double,System.Double)">
+        <member name="M:legendary_crafter.Form1.sumDivide(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
             Sums the percentage of the four parts of the specific gift up and divides by four, to achieve percent.
             </summary>
@@ -260,7 +260,7 @@
             <param name="sum4">Fourth part of the sum.</param>
             <returns></returns>
         </member>
-        <member name="M:legendary_crafter.Form1.toPercent(System.Double,System.Int32,System.Int32)">
+        <member name="M:legendary_crafter.Form1.toPercent(System.Decimal,System.Int32,System.Int32)">
             <summary>
             Calculates the percentage of the specific item and checks if needed amount is equal to NULL.
             </summary>
@@ -285,86 +285,86 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:legendary_crafter.recipeBook.GetByID(System.String)">
+        <member name="M:recipeGift.recipeBook.GetByID(System.String)">
             <summary>
             Gets the specific gift to craft the Gift of the Legendary from the data base.
             </summary>
             <param name="id">The identifier.</param>
             <returns></returns>
         </member>
-        <member name="T:legendary_crafter.legy">
+        <member name="T:legendary.legy">
             <summary>
             Defines the parameter of the constructors for the legendaries.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.id">
+        <member name="P:legendary.legy.id">
             <summary>
             Sets an unique and whitespace-free identificator for each legendary.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.name">
+        <member name="P:legendary.legy.name">
             <summary>
             Sets the name of the legendary.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.pre">
+        <member name="P:legendary.legy.pre">
             <summary>
             Sets the Precursor weapon of the legendary.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.recipeGift">
+        <member name="P:legendary.legy.recipeGift">
             <summary>
             Sets an indentifier of the specific gift needed to craft the unique Gift of the Legendary.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.matsGift">
+        <member name="P:legendary.legy.matsGift">
             <summary>
             Sets an indentifier of the specific Gift of Material needed to craft the unique Gift of the Legendary.
             </summary>
         </member>
-        <member name="P:legendary_crafter.legy.sigil">
+        <member name="P:legendary.legy.sigil">
             <summary>
             Sets the Sigil, needed to craft the legendary.
             </summary>
         </member>
-        <member name="M:legendary_crafter.legyList.GetLegy(System.String)">
+        <member name="M:legendary.legyList.GetLegy(System.String)">
             <summary>
             Gets the legendary from the data base.
             </summary>
             <param name="id">The identifier.</param>
             <returns></returns>
         </member>
-        <member name="T:legendary_crafter.matGift">
+        <member name="T:matGift.matGift">
             <summary>
             Defines the parameter of the constructors for the Gifts of Materials.
             </summary>
         </member>
-        <member name="P:legendary_crafter.matGift.name">
+        <member name="P:matGift.matGift.name">
             <summary>
             Sets the name of the Gift of Material.
             </summary>
         </member>
-        <member name="P:legendary_crafter.matGift.item">
+        <member name="P:matGift.matGift.item">
             <summary>
             First ingredient of the Gift of Material.
             </summary>
         </member>
-        <member name="P:legendary_crafter.matGift.item1">
+        <member name="P:matGift.matGift.item1">
             <summary>
             Second ingredient of the Gift of Material.
             </summary>
         </member>
-        <member name="P:legendary_crafter.matGift.item2">
+        <member name="P:matGift.matGift.item2">
             <summary>
             Third ingredient of the Gift of Material.
             </summary>
         </member>
-        <member name="P:legendary_crafter.matGift.item3">
+        <member name="P:matGift.matGift.item3">
             <summary>
             Fourth ingredient of the Gift of Material.
             </summary>
         </member>
-        <member name="M:legendary_crafter.MatStore.GetByName(System.String)">
+        <member name="M:matGift.MatStore.GetByName(System.String)">
             <summary>
             Gets the Gift of Material from the data base.
             </summary>

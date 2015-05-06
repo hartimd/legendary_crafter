@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace legendary_crafter
+namespace matGift
 {
     /// <summary>
     /// Defines the parameter of the constructors for the Gifts of Materials.

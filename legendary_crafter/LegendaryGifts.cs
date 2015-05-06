@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DungeonGift;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace legendary_crafter
+namespace recipeGift
 {
     internal class recipeGift
     {
