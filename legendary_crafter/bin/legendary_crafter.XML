@@ -16,169 +16,9 @@
             The core of the application.
             </summary>
         </member>
-        <member name="F:legendary_crafter.Form1.perc_pre">
+        <member name="M:legendary_crafter.Form1.#ctor">
             <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mastery">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_fortune">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_legy">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_tot">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_magic">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_totem">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_dust">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_venom">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_blood">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_might">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_bone">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_scale">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_claws">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_fangs">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_recipe">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_dungeon">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_ritem1">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_ritem2">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_ritem3">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mats">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mitem1">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mitem2">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mitem3">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_mitem4">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_sigil">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_runestones">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_ecto">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_clover">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_bloodstone">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_battle">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_explo">
-            <summary>
-            decimals resulting of the calculation.
-            </summary>
-        </member>
-        <member name="F:legendary_crafter.Form1.perc_obsi">
-            <summary>
-            decimals resulting of the calculation.
+            doubles resulting of the calculation.
             </summary>
         </member>
         <member name="M:legendary_crafter.Form1.button_calc_Click(System.Object,System.EventArgs)">
@@ -217,12 +57,11 @@
             Input and output integers of the application.
             </summary>
         </member>
-        <member name="M:legendary_crafter.Form1.labelCheckBox(System.String,System.String)">
+        <member name="M:legendary_crafter.Form1.labelCheckBox(System.String)">
             <summary>
             Sets the labels specific of the legendary.
             </summary>
             <param name="id">Gets the identifiator of the legendary.</param>
-            <param name="dungeon">Gets the identificator of the dungeon specific to the legendary.</param>
         </member>
         <member name="M:legendary_crafter.Form1.labelMats(System.String)">
             <summary>
@@ -249,22 +88,20 @@
             <param name="i">Input.</param>
             <param name="x">Needed amount.</param>
         </member>
-        <member name="M:legendary_crafter.Form1.sumDivide(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+        <member name="M:legendary_crafter.Form1.sumDivide(System.Double,System.Double,System.Double,System.Double)">
             <summary>
             Sums the percentage of the four parts of the specific gift up and divides by four, to achieve percent.
             </summary>
-            <param name="perc">Result.</param>
             <param name="sum1">First part of the sum.</param>
             <param name="sum2">Second part of the sum.</param>
             <param name="sum3">Third part of the sum.</param>
             <param name="sum4">Fourth part of the sum.</param>
             <returns></returns>
         </member>
-        <member name="M:legendary_crafter.Form1.toPercent(System.Decimal,System.Int32,System.Int32)">
+        <member name="M:legendary_crafter.Form1.toPercent(System.Int32,System.Int32)">
             <summary>
             Calculates the percentage of the specific item and checks if needed amount is equal to NULL.
             </summary>
-            <param name="p">Result of the calculation.</param>
             <param name="i">Input, given by TextBoxes.</param>
             <param name="x">Needed amount of items.</param>
         </member>

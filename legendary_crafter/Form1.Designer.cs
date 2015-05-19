@@ -471,10 +471,10 @@
             this.label_claws.Size = new System.Drawing.Size(30, 13);
             this.label_claws.TabIndex = 46;
             // 
-            // textBox_claw
+            // textBox_claws
             // 
             this.textBox_claws.Location = new System.Drawing.Point(508, 431);
-            this.textBox_claws.Name = "textBox_claw";
+            this.textBox_claws.Name = "textBox_claws";
             this.textBox_claws.Size = new System.Drawing.Size(37, 20);
             this.textBox_claws.TabIndex = 45;
             // 
@@ -1083,6 +1083,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Smoke\'s Legendary Crafter";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

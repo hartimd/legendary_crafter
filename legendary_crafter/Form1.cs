@@ -3,6 +3,7 @@ using legendary;
 using matGift;
 using recipeGift;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace legendary_crafter
@@ -17,31 +18,13 @@ namespace legendary_crafter
         public string[] legys = { legyList.GetLegy("bifr").name, legyList.GetLegy("bolt").name, legyList.GetLegy("flam").name, legyList.GetLegy("fren").name, legyList.GetLegy("fros").name, legyList.GetLegy("howl").name, legyList.GetLegy("inci").name, legyList.GetLegy("jugg").name, legyList.GetLegy("kamo").name, legyList.GetLegy("krai").name, legyList.GetLegy("kudz").name, legyList.GetLegy("mete").name, legyList.GetLegy("moot").name, legyList.GetLegy("quip").name, legyList.GetLegy("rodg").name, legyList.GetLegy("sunr").name, legyList.GetLegy("drea").name, legyList.GetLegy("mins").name, legyList.GetLegy("pred").name, legyList.GetLegy("twil").name };
 
         /// <summary>
-        /// decimals resulting of the calculation.
+        /// doubles resulting of the calculation.
         /// </summary>
-        public decimal perc_pre, perc_mastery, perc_fortune, perc_legy, perc_tot, perc_magic, perc_totem, perc_dust, perc_venom, perc_blood, perc_might, perc_bone, perc_scale, perc_claws, perc_fangs, perc_recipe, perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3, perc_mats, perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4, perc_sigil, perc_runestones, perc_ecto, perc_clover, perc_bloodstone, perc_battle, perc_explo, perc_obsi;
-
-        public string Mats, Abbr;
 
         public Form1()
         {
             InitializeComponent();
             comboBox_legy.DataSource = legys;
-            label_blood.Text = l_blood.ToString();
-            label_bone.Text = l_bone.ToString();
-            label_claws.Text = l_claws.ToString();
-            label_clover.Text = l_clover.ToString();
-            label_dust.Text = l_dust.ToString();
-            label_ecto.Text = l_ecto.ToString();
-            label_fangs.Text = l_fangs.ToString();
-            label_honor.Text = l_honor.ToString();
-            label_obsi.Text = l_obsi.ToString();
-            label_runestone_value.Text = l_runestone.ToString();
-            label_scale.Text = l_scale.ToString();
-            label_skill.Text = l_skill.ToString();
-            label_token_value.Text = l_token.ToString();
-            label_totem.Text = l_totem.ToString();
-            label_venom.Text = l_venom.ToString();
         }
 
         /// <summary>
@@ -99,21 +82,21 @@ namespace legendary_crafter
             }
         }
 
-        public int l_blood = 250;
-        public int l_bone = 250;
-        public int l_claws = 250;
-        public int l_clover = 77;
-        public int l_dust = 250;
-        public int l_ecto = 250;
-        public int l_fangs = 250;
-        public int l_honor = 500;
-        public int l_obsi = 250;
-        public int l_runestone = 100;
-        public int l_scale = 250;
-        public int l_skill = 200;
-        public int l_token = 500;
-        public int l_totem = 250;
-        public int l_venom = 250;
+        private int l_blood = 250;
+        private int l_bone = 250;
+        private int l_claws = 250;
+        private int l_clover = 77;
+        private int l_dust = 250;
+        private int l_ecto = 250;
+        private int l_fangs = 250;
+        private int l_honor = 500;
+        private int l_obsi = 250;
+        private int l_runestone = 100;
+        private int l_scale = 250;
+        private int l_skill = 200;
+        private int l_token = 500;
+        private int l_totem = 250;
+        private int l_venom = 250;
 
         /// <summary>
         /// Handles the SelectedIndexChanged event of the comboBox_legy control.
@@ -125,10 +108,6 @@ namespace legendary_crafter
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void comboBox_legy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] abbr = { "AC", "Arah", "CM", "COE", "FZ", "HOTW", "SE", "TA" };
-            string[] mats = { "Energy", "Metal", "Wood" };
-            string[] recipeIDs = { "eel", "color", "darkness", "entertainment", "history", "ice", "light", "lightning", "music", "nature", "stealth", "water", "weather", "shark", "unicorn", "liquidflame", "quicksilver", "wolfstatue" };
-
             button_calc.Enabled = true;
             foreach (Control c in this.Controls)
             {
@@ -142,271 +121,186 @@ namespace legendary_crafter
             switch (input)
             {
                 case "The Bifröst":
-                    labelCheckBox("bifr", "Arah");
+                    labelCheckBox("bifr");
                     break;
 
                 case "Bolt":
-                    labelCheckBox("bolt", "AC");
+                    labelCheckBox("bolt");
                     break;
 
                 case "The Flame Seeker Prophecies":
-                    labelCheckBox("flam", "AC");
+                    labelCheckBox("flam");
                     break;
 
                 case "Frenzy":
-                    labelCheckBox("fren", "HOTW");
+                    labelCheckBox("fren");
                     break;
 
                 case "Frostfang":
-                    labelCheckBox("fros", "HOTW");
+                    labelCheckBox("fros");
                     break;
 
                 case "Howler":
-                    labelCheckBox("howl", "TA");
+                    labelCheckBox("howl");
                     break;
 
                 case "Incinerator":
-                    labelCheckBox("inci", "FZ");
+                    labelCheckBox("inci");
                     break;
 
                 case "Juggernaught":
-                    labelCheckBox("jugg", "SE");
+                    labelCheckBox("jugg");
                     break;
 
                 case "Kamohoali":
-                    labelCheckBox("kamo", "Arah");
+                    labelCheckBox("kamo");
                     break;
 
                 case "Kraitkin":
-                    labelCheckBox("krai", "SE");
+                    labelCheckBox("krai");
                     break;
 
                 case "Kudzu":
-                    labelCheckBox("kudz", "TA");
+                    labelCheckBox("kudz");
                     break;
 
                 case "Meteorlogicus":
-                    labelCheckBox("mete", "COE");
+                    labelCheckBox("mete");
                     break;
 
                 case "Moot":
-                    labelCheckBox("moot", "CM");
+                    labelCheckBox("moot");
                     break;
 
                 case "Quip":
-                    labelCheckBox("quip", "CM");
+                    labelCheckBox("quip");
                     break;
 
                 case "Rodgort":
-                    labelCheckBox("rodg", "FZ");
+                    labelCheckBox("rodg");
                     break;
 
                 case "Sunrise":
-                    labelCheckBox("sunr", "AC");
+                    labelCheckBox("sunr");
                     break;
 
                 case "The Dreamer":
-                    labelCheckBox("drea", "TA");
+                    labelCheckBox("drea");
                     break;
 
                 case "The Minstrel":
-                    labelCheckBox("mins", "CM");
+                    labelCheckBox("mins");
                     break;
 
                 case "The Predator":
-                    labelCheckBox("pred", "COE");
+                    labelCheckBox("pred");
                     break;
 
                 case "Twilight":
-                    labelCheckBox("twil", "AC");
+                    labelCheckBox("twil");
                     break;
-            }
-            foreach (string item in recipeIDs)
-            {
-                if (recipeBook.GetByID(item).name == legyList.GetLegyName(input).recipeGift)
-                {
-                    labelRecipe(item);
-                }
-            }
-            foreach (string item in abbr)
-            {
-                if (Abbr == item)
-                {
-                    setDungeon(item);
-                }
-            }
-
-            foreach (string item in mats)
-            {
-                if (Mats == item)
-                {
-                    labelMats(item);
-                }
             }
         }
 
         /// <summary>
         /// Input and output integers of the application.
         /// </summary>
-        public int mats_item_value = 250;
+        private int mats_item_value = 250;
+
+        private int tryParse(Control c)
+        {
+            int temp;
+            int.TryParse(c.Text, out temp);
+            return temp;
+        }
 
         private void DoCalc()
         {
-            int i_blood;
-            int i_bone;
-            int i_claws, i_clover, i_dust, i_ecto, i_fangs, i_honor, i_obsi, i_runestone, i_scale, i_skill, i_token, i_totem, i_venom;
-            int i_ritem, i_ritem1, i_ritem2, i_mitem, i_mitem1, i_mitem2, i_mitem3;
-            Int32.TryParse(textBox_blood.Text, out i_blood);
-            Int32.TryParse(textBox_bone.Text, out i_bone);
-            Int32.TryParse(textBox_claws.Text, out i_claws);
-            Int32.TryParse(textBox_clover.Text, out i_clover);
-            Int32.TryParse(textBox_dust.Text, out i_dust);
-            Int32.TryParse(textBox_ecto.Text, out i_ecto);
-            Int32.TryParse(textBox_fangs.Text, out i_fangs);
-            Int32.TryParse(textBox_honor.Text, out i_honor);
-            Int32.TryParse(textBox_obsi.Text, out i_obsi);
-            Int32.TryParse(textBox_runestones.Text, out i_runestone);
-            Int32.TryParse(textBox_scale.Text, out i_scale);
-            Int32.TryParse(textBox_skillpoint.Text, out i_skill);
-            Int32.TryParse(textBox_token.Text, out i_token);
-            Int32.TryParse(textBox_totem.Text, out i_totem);
-            Int32.TryParse(textBox_venom.Text, out i_venom);
-
-            Int32.TryParse(textBox_recipe_item.Text, out i_ritem);
-            Int32.TryParse(textBox_recipe_item1.Text, out i_ritem1);
-            Int32.TryParse(textBox_recipe_item2.Text, out i_ritem2);
-            Int32.TryParse(textBox_mats_item.Text, out i_mitem);
-            Int32.TryParse(textBox_mats_item1.Text, out i_mitem1);
-            Int32.TryParse(textBox_mats_item2.Text, out i_mitem2);
-            Int32.TryParse(textBox_mats_item3.Text, out i_mitem3);
-
-            setMax(i_mitem, mats_item_value);
-            setMax(i_mitem1, mats_item_value);
-            setMax(i_mitem2, mats_item_value);
-            setMax(i_mitem3, mats_item_value);
-            setMax(i_ritem, l_ritem);
-            setMax(i_ritem1, l_ritem1);
-            setMax(i_ritem2, l_ritem2);
-            if (checkBox_pre.Checked == true)
+            double perc_pre = 0;
+            if (checkBox_pre.Checked)
             {
                 perc_pre = 100;
             }
-            if (checkBox_mastery.Checked == true)
+            double perc_bloodstone = toPercent(tryParse(textBox_skillpoint), l_skill);
+            if (checkBox_bloodstone.Checked)
             {
-                perc_mastery = 100.0m;
+                perc_bloodstone = 100;
             }
-            else
+            double perc_battle = toPercent(tryParse(textBox_honor), l_honor);
+            if (checkBox_battle.Checked)
             {
-                if (checkBox_bloodstone.Checked == true)
-                {
-                    perc_bloodstone = 100.0m;
-                }
-                else
-                {
-                    toPercent(perc_bloodstone, i_skill, l_skill);
-                }
-                if (checkBox_battle.Checked == true)
-                {
-                    perc_battle = 100.0m;
-                }
-                else
-                {
-                    toPercent(perc_battle, i_honor, l_honor);
-                }
-                if (checkBox_explo.Checked == true)
-                {
-                    perc_explo = 100.0m;
-                }
-                else
-                {
-                    perc_explo = 0.0m;
-                }
-                toPercent(perc_obsi, i_obsi, mats_item_value);
-                sumDivide(perc_mastery, perc_bloodstone, perc_battle, perc_explo, perc_obsi);
+                perc_battle = 100;
             }
-            if (checkBox_fortune.Checked == true)
+            double perc_explo = 0;
+            if (checkBox_explo.Checked)
             {
-                perc_fortune = 100.0m;
+                perc_explo = 100;
             }
-            else
+            double perc_obsi = toPercent(tryParse(textBox_obsi), mats_item_value);
+            double perc_mastery = sumDivide(perc_bloodstone, perc_battle, perc_explo, perc_obsi);
+            if (checkBox_mastery.Checked)
             {
-                if (checkBox_magic.Checked == true)
-                {
-                    perc_magic = 100.0m;
-                }
-                else
-                {
-                    toPercent(perc_totem, i_totem, mats_item_value);
-                    toPercent(perc_dust, i_dust, mats_item_value);
-                    toPercent(perc_venom, i_venom, mats_item_value);
-                    toPercent(perc_blood, i_blood, mats_item_value);
-                    sumDivide(perc_magic, perc_totem, perc_dust, perc_venom, perc_blood);
-                }
-                if (checkBox_might.Checked == true)
-                {
-                    perc_might = 100.0m;
-                }
-                else
-                {
-                    toPercent(perc_bone, i_bone, mats_item_value);
-                    toPercent(perc_scale, i_scale, mats_item_value);
-                    toPercent(perc_claws, i_claws, mats_item_value);
-                    toPercent(perc_fangs, i_fangs, mats_item_value);
-                    sumDivide(perc_might, perc_bone, perc_scale, perc_claws, perc_fangs);
-                }
-                toPercent(perc_ecto, i_ecto, mats_item_value);
-                toPercent(perc_clover, i_clover, l_clover);
-                sumDivide(perc_fortune, perc_magic, perc_might, perc_ecto, perc_clover);
+                perc_mastery = 100;
             }
-            if (checkBox_gift.Checked == true)
+            double perc_totem = toPercent(tryParse(textBox_totem), mats_item_value);
+            double perc_dust = toPercent(tryParse(textBox_dust), mats_item_value);
+            double perc_venom = toPercent(tryParse(textBox_venom), mats_item_value);
+            double perc_blood = toPercent(tryParse(textBox_blood), mats_item_value);
+            double perc_magic = sumDivide(perc_totem, perc_dust, perc_venom, perc_blood);
+            if (checkBox_magic.Checked)
             {
-                perc_legy = 100.0m;
+                perc_magic = 100;
             }
-            else
+            double perc_bone = toPercent(tryParse(textBox_bone), mats_item_value);
+            double perc_scale = toPercent(tryParse(textBox_scale), mats_item_value);
+            double perc_claws = toPercent(tryParse(textBox_claws), mats_item_value);
+            double perc_fangs = toPercent(tryParse(textBox_fangs), mats_item_value);
+            double perc_might = sumDivide(perc_bone, perc_scale, perc_claws, perc_fangs);
+            if (checkBox_might.Checked)
             {
-                if (checkBox_recipe_gift.Checked == true)
-                {
-                    perc_recipe = 100.0m;
-                }
-                else
-                {
-                    if (checkBox_dungeon_gift.Checked == true)
-                    {
-                        perc_dungeon = 100.0m;
-                    }
-                    else
-                    {
-                        toPercent(perc_dungeon, i_token, l_token);
-                    }
-                    toPercent(perc_ritem1, i_ritem, l_ritem);
-                    toPercent(perc_ritem2, i_ritem1, l_ritem1);
-                    toPercent(perc_ritem3, i_ritem2, l_ritem2);
-                    sumDivide(perc_recipe, perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3);
-                }
-                if (checkBox_mats_gift.Checked == true)
-                {
-                    perc_mats = 100.0m;
-                }
-                else
-                {
-                    toPercent(perc_mitem1, i_mitem, mats_item_value);
-                    toPercent(perc_mitem2, i_mitem1, mats_item_value);
-                    toPercent(perc_mitem3, i_mitem2, mats_item_value);
-                    toPercent(perc_mitem4, i_mitem3, mats_item_value);
-                    sumDivide(perc_mats, perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4);
-                }
-                if (checkBox_sigil.Checked == true)
-                {
-                    perc_sigil = 100.0m;
-                }
-                else
-                {
-                    perc_sigil = 0.0m;
-                }
-                toPercent(perc_runestones, i_runestone, l_runestone);
-                sumDivide(perc_legy, perc_recipe, perc_mats, perc_sigil, perc_runestones);
+                perc_might = 100;
             }
-            sumDivide(perc_tot, perc_pre, perc_mastery, perc_fortune, perc_legy);
+            double perc_ecto = toPercent(tryParse(textBox_ecto), mats_item_value);
+            double perc_clover = toPercent(tryParse(textBox_clover), l_clover);
+            double perc_fortune = sumDivide(perc_magic, perc_might, perc_ecto, perc_clover);
+            if (checkBox_fortune.Checked)
+            {
+                perc_fortune = 100;
+            }
+            double perc_dungeon = toPercent(tryParse(textBox_token), l_token);
+            if (checkBox_dungeon_gift.Checked)
+            {
+                perc_dungeon = 100;
+            }
+            double perc_ritem1 = toPercent(tryParse(textBox_recipe_item), l_ritem);
+            double perc_ritem2 = toPercent(tryParse(textBox_recipe_item1), l_ritem1);
+            double perc_ritem3 = toPercent(tryParse(textBox_recipe_item2), l_ritem2);
+            double perc_recipe = sumDivide(perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3);
+            if (checkBox_recipe_gift.Checked)
+            {
+                perc_recipe = 100;
+            }
+            double perc_mitem1 = toPercent(tryParse(textBox_mats_item), mats_item_value);
+            double perc_mitem2 = toPercent(tryParse(textBox_mats_item1), mats_item_value);
+            double perc_mitem3 = toPercent(tryParse(textBox_mats_item2), mats_item_value);
+            double perc_mitem4 = toPercent(tryParse(textBox_mats_item3), mats_item_value);
+            double perc_mats = sumDivide(perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4);
+            if (checkBox_mats_gift.Checked)
+            {
+                perc_mats = 100;
+            }
+            double perc_sigil = 0;
+            if (checkBox_sigil.Checked)
+            {
+                perc_sigil = 100;
+            }
+            double perc_runestones = toPercent(tryParse(textBox_runestones), l_runestone);
+            double perc_legy = sumDivide(perc_recipe, perc_mats, perc_sigil, perc_runestones);
+            if (checkBox_gift.Checked)
+            {
+                perc_legy = 100;
+            }
+            double perc_tot = sumDivide(perc_pre, perc_mastery, perc_fortune, perc_legy);
             label_perc.Text = perc_tot.ToString() + " %";
         }
 
@@ -414,14 +308,14 @@ namespace legendary_crafter
         /// Sets the labels specific of the legendary.
         /// </summary>
         /// <param name="id">Gets the identifiator of the legendary.</param>
-        /// <param name="dungeon">Gets the identificator of the dungeon specific to the legendary.</param>
-        private void labelCheckBox(string id, string dungeon)
+        private void labelCheckBox(string id)
         {
             checkBox_pre.Text = legyList.GetLegy(id).pre;
             checkBox_gift.Text = "Gift of" + legyList.GetLegy(id).name;
-            checkBox_recipe_gift.Text = legyList.GetLegy(id).recipeGift;
-            Abbr = DungeonStore.GetByCode(dungeon).Abbr;
-            Mats = legyList.GetLegy(id).matsGift;
+            checkBox_recipe_gift.Text = recipeBook.GetByID(legyList.GetLegy(id).recipeGift).name;
+            setDungeon(recipeBook.GetByID(legyList.GetLegy(id).recipeGift).dungeonGift);
+            labelMats(legyList.GetLegy(id).matsGift);
+            labelRecipe(legyList.GetLegy(id).recipeGift);
             checkBox_sigil.Text = "Superior Sigil of " + legyList.GetLegy(id).sigil;
         }
 
@@ -483,11 +377,11 @@ namespace legendary_crafter
         {
             if (i < 0)
             {
-                return i = 0;
+                return 0;
             }
-            else if (i >= x)
+            else if (i > x)
             {
-                return i = x;
+                return x;
             }
             else
             {
@@ -498,28 +392,50 @@ namespace legendary_crafter
         /// <summary>
         /// Sums the percentage of the four parts of the specific gift up and divides by four, to achieve percent.
         /// </summary>
-        /// <param name="perc">Result.</param>
         /// <param name="sum1">First part of the sum.</param>
         /// <param name="sum2">Second part of the sum.</param>
         /// <param name="sum3">Third part of the sum.</param>
         /// <param name="sum4">Fourth part of the sum.</param>
         /// <returns></returns>
-        private decimal sumDivide(decimal perc, decimal sum1, decimal sum2, decimal sum3, decimal sum4)
+        private double sumDivide(double sum1, double sum2, double sum3, double sum4)
         {
-            return perc = (sum1 + sum2 + sum3 + sum4) / 4;
+            return ((sum1 + sum2 + sum3 + sum4) / 4);
         }
 
         /// <summary>
         /// Calculates the percentage of the specific item and checks if needed amount is equal to NULL.
         /// </summary>
-        /// <param name="p">Result of the calculation.</param>
         /// <param name="i">Input, given by TextBoxes.</param>
         /// <param name="x">Needed amount of items.</param>
-        private decimal toPercent(decimal p, int i, int x)
+        private double toPercent(int i, int x)
         {
-            setMax(i, x);
-            p = (i / x) * 100.0m;
-            return p;
+            return ((double)(setMax(i, x)) / (double)x) * 100.0;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Dictionary<Control, int> initLabel = new Dictionary<Control, int>()
+            {
+                {label_blood, l_blood},
+                {label_bone, l_bone},
+                {label_claws, l_claws},
+                {label_clover, l_clover},
+                {label_dust, l_dust},
+                {label_ecto, l_ecto},
+                {label_fangs, l_fangs},
+                {label_honor, l_honor},
+                {label_obsi, l_obsi},
+                {label_runestone_value, l_runestone},
+                {label_scale, l_scale},
+                {label_skill, l_skill},
+                {label_token_value, l_token},
+                {label_totem, l_totem},
+                {label_venom, l_venom}
+            };
+            foreach (var item in initLabel)
+            {
+                item.Key.Text = item.Value.ToString();
+            }
         }
     }
 }
