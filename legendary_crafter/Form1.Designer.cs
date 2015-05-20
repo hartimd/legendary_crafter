@@ -80,8 +80,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label_perc = new System.Windows.Forms.Label();
             this.button_calc = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label_runestone_value = new System.Windows.Forms.Label();
             this.textBox_runestones = new System.Windows.Forms.TextBox();
             this.label_runestones = new System.Windows.Forms.Label();
@@ -113,13 +111,38 @@
             this.label_recipe_item = new System.Windows.Forms.Label();
             this.checkBox_dungeon_gift = new System.Windows.Forms.CheckBox();
             this.checkBox_recipe_gift = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label_dungeonname = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_save = new System.Windows.Forms.Button();
             this.button_load = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.labelMatsItemPrice = new System.Windows.Forms.Label();
+            this.labelMatsItem1Price = new System.Windows.Forms.Label();
+            this.labelMatsItem2Price = new System.Windows.Forms.Label();
+            this.labelMatsItem3Price = new System.Windows.Forms.Label();
+            this.labelDungeonName = new System.Windows.Forms.Label();
+            this.labelMatsPriceTot = new System.Windows.Forms.Label();
+            this.labelGoldTotal = new System.Windows.Forms.Label();
+            this.labelLegyPrice = new System.Windows.Forms.Label();
+            this.labelPrePrice = new System.Windows.Forms.Label();
+            this.labelRunestones = new System.Windows.Forms.Label();
+            this.labelGiftLegyPrice = new System.Windows.Forms.Label();
+            this.labelTotemPrice = new System.Windows.Forms.Label();
+            this.labelDustPrice = new System.Windows.Forms.Label();
+            this.labelVenomPrice = new System.Windows.Forms.Label();
+            this.labelBloodPrice = new System.Windows.Forms.Label();
+            this.labelBonePrice = new System.Windows.Forms.Label();
+            this.labelScalePrice = new System.Windows.Forms.Label();
+            this.labelClawsPrice = new System.Windows.Forms.Label();
+            this.labelFangsPrice = new System.Windows.Forms.Label();
+            this.labelEctoPrice = new System.Windows.Forms.Label();
+            this.labelMagicPrice = new System.Windows.Forms.Label();
+            this.labelFortunePrice = new System.Windows.Forms.Label();
+            this.labelMightPrice = new System.Windows.Forms.Label();
+            this.labelRItem3 = new System.Windows.Forms.Label();
+            this.labelRItem2 = new System.Windows.Forms.Label();
+            this.labelRItem1 = new System.Windows.Forms.Label();
+            this.labelUniqueGiftPrice = new System.Windows.Forms.Label();
+            this.labelSigilPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox_legy
@@ -152,13 +175,13 @@
             this.checkBox_fortune.AutoSize = true;
             this.checkBox_fortune.Enabled = false;
             this.checkBox_fortune.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_fortune.Location = new System.Drawing.Point(348, 207);
+            this.checkBox_fortune.Location = new System.Drawing.Point(405, 210);
             this.checkBox_fortune.MinimumSize = new System.Drawing.Size(150, 0);
             this.checkBox_fortune.Name = "checkBox_fortune";
             this.checkBox_fortune.Size = new System.Drawing.Size(150, 17);
             this.checkBox_fortune.TabIndex = 2;
             this.checkBox_fortune.Text = "Gift of Fortune";
-            this.checkBox_fortune.UseVisualStyleBackColor = true;
+            this.checkBox_fortune.UseVisualStyleBackColor = false;
             this.checkBox_fortune.CheckStateChanged += new System.EventHandler(this.button_calc_Click);
             // 
             // checkBox_mastery
@@ -166,7 +189,7 @@
             this.checkBox_mastery.AutoSize = true;
             this.checkBox_mastery.Enabled = false;
             this.checkBox_mastery.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_mastery.Location = new System.Drawing.Point(348, 46);
+            this.checkBox_mastery.Location = new System.Drawing.Point(405, 49);
             this.checkBox_mastery.MinimumSize = new System.Drawing.Size(150, 0);
             this.checkBox_mastery.Name = "checkBox_mastery";
             this.checkBox_mastery.Size = new System.Drawing.Size(150, 17);
@@ -193,7 +216,7 @@
             // 
             this.checkBox_bloodstone.AutoSize = true;
             this.checkBox_bloodstone.Enabled = false;
-            this.checkBox_bloodstone.Location = new System.Drawing.Point(372, 69);
+            this.checkBox_bloodstone.Location = new System.Drawing.Point(429, 72);
             this.checkBox_bloodstone.Name = "checkBox_bloodstone";
             this.checkBox_bloodstone.Size = new System.Drawing.Size(110, 17);
             this.checkBox_bloodstone.TabIndex = 5;
@@ -205,7 +228,7 @@
             // 
             this.checkBox_battle.AutoSize = true;
             this.checkBox_battle.Enabled = false;
-            this.checkBox_battle.Location = new System.Drawing.Point(372, 109);
+            this.checkBox_battle.Location = new System.Drawing.Point(429, 112);
             this.checkBox_battle.Name = "checkBox_battle";
             this.checkBox_battle.Size = new System.Drawing.Size(84, 17);
             this.checkBox_battle.TabIndex = 6;
@@ -217,7 +240,7 @@
             // 
             this.checkBox_explo.AutoSize = true;
             this.checkBox_explo.Enabled = false;
-            this.checkBox_explo.Location = new System.Drawing.Point(372, 150);
+            this.checkBox_explo.Location = new System.Drawing.Point(429, 153);
             this.checkBox_explo.Name = "checkBox_explo";
             this.checkBox_explo.Size = new System.Drawing.Size(109, 17);
             this.checkBox_explo.TabIndex = 7;
@@ -228,7 +251,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(370, 174);
+            this.label1.Location = new System.Drawing.Point(427, 177);
             this.label1.MaximumSize = new System.Drawing.Size(110, 0);
             this.label1.MinimumSize = new System.Drawing.Size(110, 0);
             this.label1.Name = "label1";
@@ -238,7 +261,7 @@
             // 
             // textBox_obsi
             // 
-            this.textBox_obsi.Location = new System.Drawing.Point(487, 171);
+            this.textBox_obsi.Location = new System.Drawing.Point(544, 174);
             this.textBox_obsi.Name = "textBox_obsi";
             this.textBox_obsi.Size = new System.Drawing.Size(37, 20);
             this.textBox_obsi.TabIndex = 9;
@@ -246,7 +269,7 @@
             // label_obsi
             // 
             this.label_obsi.AutoSize = true;
-            this.label_obsi.Location = new System.Drawing.Point(531, 173);
+            this.label_obsi.Location = new System.Drawing.Point(588, 176);
             this.label_obsi.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_obsi.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_obsi.Name = "label_obsi";
@@ -256,7 +279,7 @@
             // label_skill
             // 
             this.label_skill.AutoSize = true;
-            this.label_skill.Location = new System.Drawing.Point(550, 88);
+            this.label_skill.Location = new System.Drawing.Point(607, 91);
             this.label_skill.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_skill.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_skill.Name = "label_skill";
@@ -265,7 +288,7 @@
             // 
             // textBox_skillpoint
             // 
-            this.textBox_skillpoint.Location = new System.Drawing.Point(506, 86);
+            this.textBox_skillpoint.Location = new System.Drawing.Point(563, 89);
             this.textBox_skillpoint.Name = "textBox_skillpoint";
             this.textBox_skillpoint.Size = new System.Drawing.Size(37, 20);
             this.textBox_skillpoint.TabIndex = 12;
@@ -273,7 +296,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(389, 89);
+            this.label4.Location = new System.Drawing.Point(446, 92);
             this.label4.MaximumSize = new System.Drawing.Size(110, 0);
             this.label4.MinimumSize = new System.Drawing.Size(110, 0);
             this.label4.Name = "label4";
@@ -284,7 +307,7 @@
             // label_honor
             // 
             this.label_honor.AutoSize = true;
-            this.label_honor.Location = new System.Drawing.Point(550, 128);
+            this.label_honor.Location = new System.Drawing.Point(607, 131);
             this.label_honor.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_honor.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_honor.Name = "label_honor";
@@ -293,7 +316,7 @@
             // 
             // textBox_honor
             // 
-            this.textBox_honor.Location = new System.Drawing.Point(506, 126);
+            this.textBox_honor.Location = new System.Drawing.Point(563, 129);
             this.textBox_honor.Name = "textBox_honor";
             this.textBox_honor.Size = new System.Drawing.Size(37, 20);
             this.textBox_honor.TabIndex = 15;
@@ -301,7 +324,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(389, 129);
+            this.label6.Location = new System.Drawing.Point(446, 132);
             this.label6.MaximumSize = new System.Drawing.Size(110, 0);
             this.label6.MinimumSize = new System.Drawing.Size(110, 0);
             this.label6.Name = "label6";
@@ -313,18 +336,18 @@
             // 
             this.checkBox_magic.AutoSize = true;
             this.checkBox_magic.Enabled = false;
-            this.checkBox_magic.Location = new System.Drawing.Point(374, 230);
+            this.checkBox_magic.Location = new System.Drawing.Point(431, 233);
             this.checkBox_magic.Name = "checkBox_magic";
             this.checkBox_magic.Size = new System.Drawing.Size(86, 17);
             this.checkBox_magic.TabIndex = 17;
             this.checkBox_magic.Text = "Gift of Magic";
-            this.checkBox_magic.UseVisualStyleBackColor = true;
+            this.checkBox_magic.UseVisualStyleBackColor = false;
             this.checkBox_magic.CheckStateChanged += new System.EventHandler(this.button_calc_Click);
             // 
             // label_totem
             // 
             this.label_totem.AutoSize = true;
-            this.label_totem.Location = new System.Drawing.Point(552, 249);
+            this.label_totem.Location = new System.Drawing.Point(609, 252);
             this.label_totem.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_totem.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_totem.Name = "label_totem";
@@ -333,7 +356,7 @@
             // 
             // textBox_totem
             // 
-            this.textBox_totem.Location = new System.Drawing.Point(508, 247);
+            this.textBox_totem.Location = new System.Drawing.Point(565, 250);
             this.textBox_totem.Name = "textBox_totem";
             this.textBox_totem.Size = new System.Drawing.Size(37, 20);
             this.textBox_totem.TabIndex = 20;
@@ -341,7 +364,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(391, 250);
+            this.label8.Location = new System.Drawing.Point(448, 253);
             this.label8.MaximumSize = new System.Drawing.Size(110, 0);
             this.label8.MinimumSize = new System.Drawing.Size(110, 0);
             this.label8.Name = "label8";
@@ -352,7 +375,7 @@
             // label_dust
             // 
             this.label_dust.AutoSize = true;
-            this.label_dust.Location = new System.Drawing.Point(552, 275);
+            this.label_dust.Location = new System.Drawing.Point(609, 278);
             this.label_dust.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_dust.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_dust.Name = "label_dust";
@@ -361,7 +384,7 @@
             // 
             // textBox_dust
             // 
-            this.textBox_dust.Location = new System.Drawing.Point(508, 273);
+            this.textBox_dust.Location = new System.Drawing.Point(565, 276);
             this.textBox_dust.Name = "textBox_dust";
             this.textBox_dust.Size = new System.Drawing.Size(37, 20);
             this.textBox_dust.TabIndex = 24;
@@ -369,7 +392,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(391, 276);
+            this.label10.Location = new System.Drawing.Point(448, 279);
             this.label10.MaximumSize = new System.Drawing.Size(110, 0);
             this.label10.MinimumSize = new System.Drawing.Size(110, 0);
             this.label10.Name = "label10";
@@ -380,7 +403,7 @@
             // label_venom
             // 
             this.label_venom.AutoSize = true;
-            this.label_venom.Location = new System.Drawing.Point(552, 301);
+            this.label_venom.Location = new System.Drawing.Point(609, 304);
             this.label_venom.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_venom.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_venom.Name = "label_venom";
@@ -389,7 +412,7 @@
             // 
             // textBox_venom
             // 
-            this.textBox_venom.Location = new System.Drawing.Point(508, 299);
+            this.textBox_venom.Location = new System.Drawing.Point(565, 302);
             this.textBox_venom.Name = "textBox_venom";
             this.textBox_venom.Size = new System.Drawing.Size(37, 20);
             this.textBox_venom.TabIndex = 28;
@@ -397,7 +420,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(391, 302);
+            this.label12.Location = new System.Drawing.Point(448, 305);
             this.label12.MaximumSize = new System.Drawing.Size(110, 0);
             this.label12.MinimumSize = new System.Drawing.Size(110, 0);
             this.label12.Name = "label12";
@@ -408,7 +431,7 @@
             // label_blood
             // 
             this.label_blood.AutoSize = true;
-            this.label_blood.Location = new System.Drawing.Point(552, 327);
+            this.label_blood.Location = new System.Drawing.Point(609, 330);
             this.label_blood.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_blood.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_blood.Name = "label_blood";
@@ -417,7 +440,7 @@
             // 
             // textBox_blood
             // 
-            this.textBox_blood.Location = new System.Drawing.Point(508, 325);
+            this.textBox_blood.Location = new System.Drawing.Point(565, 328);
             this.textBox_blood.Name = "textBox_blood";
             this.textBox_blood.Size = new System.Drawing.Size(37, 20);
             this.textBox_blood.TabIndex = 32;
@@ -425,7 +448,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(391, 328);
+            this.label14.Location = new System.Drawing.Point(448, 331);
             this.label14.MaximumSize = new System.Drawing.Size(110, 0);
             this.label14.MinimumSize = new System.Drawing.Size(110, 0);
             this.label14.Name = "label14";
@@ -436,7 +459,7 @@
             // label_fangs
             // 
             this.label_fangs.AutoSize = true;
-            this.label_fangs.Location = new System.Drawing.Point(552, 459);
+            this.label_fangs.Location = new System.Drawing.Point(609, 462);
             this.label_fangs.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_fangs.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_fangs.Name = "label_fangs";
@@ -445,7 +468,7 @@
             // 
             // textBox_fangs
             // 
-            this.textBox_fangs.Location = new System.Drawing.Point(508, 457);
+            this.textBox_fangs.Location = new System.Drawing.Point(565, 460);
             this.textBox_fangs.Name = "textBox_fangs";
             this.textBox_fangs.Size = new System.Drawing.Size(37, 20);
             this.textBox_fangs.TabIndex = 49;
@@ -453,7 +476,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(391, 460);
+            this.label16.Location = new System.Drawing.Point(448, 463);
             this.label16.MaximumSize = new System.Drawing.Size(110, 0);
             this.label16.MinimumSize = new System.Drawing.Size(110, 0);
             this.label16.Name = "label16";
@@ -464,7 +487,7 @@
             // label_claws
             // 
             this.label_claws.AutoSize = true;
-            this.label_claws.Location = new System.Drawing.Point(552, 433);
+            this.label_claws.Location = new System.Drawing.Point(609, 436);
             this.label_claws.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_claws.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_claws.Name = "label_claws";
@@ -473,7 +496,7 @@
             // 
             // textBox_claws
             // 
-            this.textBox_claws.Location = new System.Drawing.Point(508, 431);
+            this.textBox_claws.Location = new System.Drawing.Point(565, 434);
             this.textBox_claws.Name = "textBox_claws";
             this.textBox_claws.Size = new System.Drawing.Size(37, 20);
             this.textBox_claws.TabIndex = 45;
@@ -481,7 +504,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(391, 434);
+            this.label18.Location = new System.Drawing.Point(448, 437);
             this.label18.MaximumSize = new System.Drawing.Size(110, 0);
             this.label18.MinimumSize = new System.Drawing.Size(110, 0);
             this.label18.Name = "label18";
@@ -492,7 +515,7 @@
             // label_scale
             // 
             this.label_scale.AutoSize = true;
-            this.label_scale.Location = new System.Drawing.Point(552, 407);
+            this.label_scale.Location = new System.Drawing.Point(609, 410);
             this.label_scale.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_scale.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_scale.Name = "label_scale";
@@ -501,7 +524,7 @@
             // 
             // textBox_scale
             // 
-            this.textBox_scale.Location = new System.Drawing.Point(508, 405);
+            this.textBox_scale.Location = new System.Drawing.Point(565, 408);
             this.textBox_scale.Name = "textBox_scale";
             this.textBox_scale.Size = new System.Drawing.Size(37, 20);
             this.textBox_scale.TabIndex = 41;
@@ -509,7 +532,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(391, 408);
+            this.label20.Location = new System.Drawing.Point(448, 411);
             this.label20.MaximumSize = new System.Drawing.Size(110, 0);
             this.label20.MinimumSize = new System.Drawing.Size(110, 0);
             this.label20.Name = "label20";
@@ -520,7 +543,7 @@
             // label_bone
             // 
             this.label_bone.AutoSize = true;
-            this.label_bone.Location = new System.Drawing.Point(552, 381);
+            this.label_bone.Location = new System.Drawing.Point(609, 384);
             this.label_bone.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_bone.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_bone.Name = "label_bone";
@@ -529,7 +552,7 @@
             // 
             // textBox_bone
             // 
-            this.textBox_bone.Location = new System.Drawing.Point(508, 379);
+            this.textBox_bone.Location = new System.Drawing.Point(565, 382);
             this.textBox_bone.Name = "textBox_bone";
             this.textBox_bone.Size = new System.Drawing.Size(37, 20);
             this.textBox_bone.TabIndex = 37;
@@ -537,7 +560,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(391, 382);
+            this.label22.Location = new System.Drawing.Point(448, 385);
             this.label22.MaximumSize = new System.Drawing.Size(110, 0);
             this.label22.MinimumSize = new System.Drawing.Size(110, 0);
             this.label22.Name = "label22";
@@ -549,18 +572,18 @@
             // 
             this.checkBox_might.AutoSize = true;
             this.checkBox_might.Enabled = false;
-            this.checkBox_might.Location = new System.Drawing.Point(374, 362);
+            this.checkBox_might.Location = new System.Drawing.Point(431, 365);
             this.checkBox_might.Name = "checkBox_might";
             this.checkBox_might.Size = new System.Drawing.Size(83, 17);
             this.checkBox_might.TabIndex = 34;
             this.checkBox_might.Text = "Gift of Might";
-            this.checkBox_might.UseVisualStyleBackColor = true;
+            this.checkBox_might.UseVisualStyleBackColor = false;
             this.checkBox_might.CheckStateChanged += new System.EventHandler(this.button_calc_Click);
             // 
             // label_ecto
             // 
             this.label_ecto.AutoSize = true;
-            this.label_ecto.Location = new System.Drawing.Point(520, 491);
+            this.label_ecto.Location = new System.Drawing.Point(577, 494);
             this.label_ecto.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_ecto.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_ecto.Name = "label_ecto";
@@ -569,7 +592,7 @@
             // 
             // textBox_ecto
             // 
-            this.textBox_ecto.Location = new System.Drawing.Point(476, 488);
+            this.textBox_ecto.Location = new System.Drawing.Point(533, 491);
             this.textBox_ecto.Name = "textBox_ecto";
             this.textBox_ecto.Size = new System.Drawing.Size(37, 20);
             this.textBox_ecto.TabIndex = 52;
@@ -577,7 +600,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(371, 491);
+            this.label24.Location = new System.Drawing.Point(428, 494);
             this.label24.MaximumSize = new System.Drawing.Size(100, 0);
             this.label24.MinimumSize = new System.Drawing.Size(100, 0);
             this.label24.Name = "label24";
@@ -588,7 +611,7 @@
             // label_clover
             // 
             this.label_clover.AutoSize = true;
-            this.label_clover.Location = new System.Drawing.Point(520, 517);
+            this.label_clover.Location = new System.Drawing.Point(577, 520);
             this.label_clover.MaximumSize = new System.Drawing.Size(30, 0);
             this.label_clover.MinimumSize = new System.Drawing.Size(30, 0);
             this.label_clover.Name = "label_clover";
@@ -597,7 +620,7 @@
             // 
             // textBox_clover
             // 
-            this.textBox_clover.Location = new System.Drawing.Point(476, 514);
+            this.textBox_clover.Location = new System.Drawing.Point(533, 517);
             this.textBox_clover.Name = "textBox_clover";
             this.textBox_clover.Size = new System.Drawing.Size(37, 20);
             this.textBox_clover.TabIndex = 55;
@@ -605,7 +628,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(371, 517);
+            this.label26.Location = new System.Drawing.Point(428, 520);
             this.label26.MaximumSize = new System.Drawing.Size(100, 0);
             this.label26.MinimumSize = new System.Drawing.Size(100, 0);
             this.label26.Name = "label26";
@@ -635,22 +658,6 @@
             this.button_calc.Text = "Calc";
             this.button_calc.UseVisualStyleBackColor = true;
             this.button_calc.Click += new System.EventHandler(this.button_calc_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(360, 46);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(225, 151);
-            this.groupBox2.TabIndex = 91;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(360, 208);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(225, 340);
-            this.groupBox3.TabIndex = 92;
-            this.groupBox3.TabStop = false;
             // 
             // label_runestone_value
             // 
@@ -689,7 +696,7 @@
             this.checkBox_sigil.Size = new System.Drawing.Size(87, 17);
             this.checkBox_sigil.TabIndex = 120;
             this.checkBox_sigil.Text = "Superior Sigil";
-            this.checkBox_sigil.UseVisualStyleBackColor = true;
+            this.checkBox_sigil.UseVisualStyleBackColor = false;
             // 
             // label_mats_item3_value
             // 
@@ -808,7 +815,7 @@
             this.checkBox_mats_gift.Size = new System.Drawing.Size(99, 17);
             this.checkBox_mats_gift.TabIndex = 107;
             this.checkBox_mats_gift.Text = "Gift of Materials";
-            this.checkBox_mats_gift.UseVisualStyleBackColor = true;
+            this.checkBox_mats_gift.UseVisualStyleBackColor = false;
             // 
             // label_token_value
             // 
@@ -941,23 +948,6 @@
             this.checkBox_recipe_gift.Text = "Unique Gift";
             this.checkBox_recipe_gift.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label_dungeonname);
-            this.groupBox1.Location = new System.Drawing.Point(72, 69);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 355);
-            this.groupBox1.TabIndex = 124;
-            this.groupBox1.TabStop = false;
-            // 
-            // label_dungeonname
-            // 
-            this.label_dungeonname.AutoSize = true;
-            this.label_dungeonname.Location = new System.Drawing.Point(154, 43);
-            this.label_dungeonname.Name = "label_dungeonname";
-            this.label_dungeonname.Size = new System.Drawing.Size(0, 13);
-            this.label_dungeonname.TabIndex = 0;
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.FileName = "legendary_crafter";
@@ -974,7 +964,7 @@
             this.button_save.Size = new System.Drawing.Size(75, 23);
             this.button_save.TabIndex = 125;
             this.button_save.Text = "Save";
-            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.UseVisualStyleBackColor = false;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_load
@@ -984,14 +974,278 @@
             this.button_load.Size = new System.Drawing.Size(75, 23);
             this.button_load.TabIndex = 126;
             this.button_load.Text = "Load";
-            this.button_load.UseVisualStyleBackColor = true;
+            this.button_load.UseVisualStyleBackColor = false;
             this.button_load.Click += new System.EventHandler(this.button_load_Click);
+            // 
+            // labelMatsItemPrice
+            // 
+            this.labelMatsItemPrice.AutoSize = true;
+            this.labelMatsItemPrice.Location = new System.Drawing.Point(314, 264);
+            this.labelMatsItemPrice.MinimumSize = new System.Drawing.Size(40, 0);
+            this.labelMatsItemPrice.Name = "labelMatsItemPrice";
+            this.labelMatsItemPrice.Size = new System.Drawing.Size(40, 13);
+            this.labelMatsItemPrice.TabIndex = 1;
+            // 
+            // labelMatsItem1Price
+            // 
+            this.labelMatsItem1Price.AutoSize = true;
+            this.labelMatsItem1Price.Location = new System.Drawing.Point(314, 287);
+            this.labelMatsItem1Price.MinimumSize = new System.Drawing.Size(40, 0);
+            this.labelMatsItem1Price.Name = "labelMatsItem1Price";
+            this.labelMatsItem1Price.Size = new System.Drawing.Size(40, 13);
+            this.labelMatsItem1Price.TabIndex = 127;
+            // 
+            // labelMatsItem2Price
+            // 
+            this.labelMatsItem2Price.AutoSize = true;
+            this.labelMatsItem2Price.Location = new System.Drawing.Point(314, 313);
+            this.labelMatsItem2Price.MinimumSize = new System.Drawing.Size(40, 0);
+            this.labelMatsItem2Price.Name = "labelMatsItem2Price";
+            this.labelMatsItem2Price.Size = new System.Drawing.Size(40, 13);
+            this.labelMatsItem2Price.TabIndex = 128;
+            // 
+            // labelMatsItem3Price
+            // 
+            this.labelMatsItem3Price.AutoSize = true;
+            this.labelMatsItem3Price.Location = new System.Drawing.Point(314, 339);
+            this.labelMatsItem3Price.MinimumSize = new System.Drawing.Size(40, 0);
+            this.labelMatsItem3Price.Name = "labelMatsItem3Price";
+            this.labelMatsItem3Price.Size = new System.Drawing.Size(40, 13);
+            this.labelMatsItem3Price.TabIndex = 129;
+            // 
+            // labelDungeonName
+            // 
+            this.labelDungeonName.AutoSize = true;
+            this.labelDungeonName.Location = new System.Drawing.Point(236, 113);
+            this.labelDungeonName.MaximumSize = new System.Drawing.Size(130, 0);
+            this.labelDungeonName.MinimumSize = new System.Drawing.Size(130, 0);
+            this.labelDungeonName.Name = "labelDungeonName";
+            this.labelDungeonName.Size = new System.Drawing.Size(130, 13);
+            this.labelDungeonName.TabIndex = 130;
+            this.labelDungeonName.Text = "Dungeon Name";
+            // 
+            // labelMatsPriceTot
+            // 
+            this.labelMatsPriceTot.AutoSize = true;
+            this.labelMatsPriceTot.Location = new System.Drawing.Point(276, 237);
+            this.labelMatsPriceTot.Name = "labelMatsPriceTot";
+            this.labelMatsPriceTot.Size = new System.Drawing.Size(0, 13);
+            this.labelMatsPriceTot.TabIndex = 131;
+            // 
+            // labelGoldTotal
+            // 
+            this.labelGoldTotal.AutoSize = true;
+            this.labelGoldTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelGoldTotal.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelGoldTotal.Location = new System.Drawing.Point(7, 482);
+            this.labelGoldTotal.MaximumSize = new System.Drawing.Size(250, 0);
+            this.labelGoldTotal.MinimumSize = new System.Drawing.Size(150, 0);
+            this.labelGoldTotal.Name = "labelGoldTotal";
+            this.labelGoldTotal.Size = new System.Drawing.Size(150, 26);
+            this.labelGoldTotal.TabIndex = 132;
+            // 
+            // labelLegyPrice
+            // 
+            this.labelLegyPrice.AutoSize = true;
+            this.labelLegyPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelLegyPrice.Location = new System.Drawing.Point(313, 15);
+            this.labelLegyPrice.Name = "labelLegyPrice";
+            this.labelLegyPrice.Size = new System.Drawing.Size(0, 20);
+            this.labelLegyPrice.TabIndex = 133;
+            // 
+            // labelPrePrice
+            // 
+            this.labelPrePrice.AutoSize = true;
+            this.labelPrePrice.Location = new System.Drawing.Point(223, 50);
+            this.labelPrePrice.Name = "labelPrePrice";
+            this.labelPrePrice.Size = new System.Drawing.Size(0, 13);
+            this.labelPrePrice.TabIndex = 134;
+            // 
+            // labelRunestones
+            // 
+            this.labelRunestones.AutoSize = true;
+            this.labelRunestones.Location = new System.Drawing.Point(280, 392);
+            this.labelRunestones.Name = "labelRunestones";
+            this.labelRunestones.Size = new System.Drawing.Size(0, 13);
+            this.labelRunestones.TabIndex = 135;
+            // 
+            // labelGiftLegyPrice
+            // 
+            this.labelGiftLegyPrice.AutoSize = true;
+            this.labelGiftLegyPrice.Location = new System.Drawing.Point(223, 67);
+            this.labelGiftLegyPrice.Name = "labelGiftLegyPrice";
+            this.labelGiftLegyPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelGiftLegyPrice.TabIndex = 136;
+            // 
+            // labelTotemPrice
+            // 
+            this.labelTotemPrice.AutoSize = true;
+            this.labelTotemPrice.Location = new System.Drawing.Point(645, 252);
+            this.labelTotemPrice.Name = "labelTotemPrice";
+            this.labelTotemPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelTotemPrice.TabIndex = 137;
+            // 
+            // labelDustPrice
+            // 
+            this.labelDustPrice.AutoSize = true;
+            this.labelDustPrice.Location = new System.Drawing.Point(645, 278);
+            this.labelDustPrice.Name = "labelDustPrice";
+            this.labelDustPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelDustPrice.TabIndex = 138;
+            // 
+            // labelVenomPrice
+            // 
+            this.labelVenomPrice.AutoSize = true;
+            this.labelVenomPrice.Location = new System.Drawing.Point(645, 305);
+            this.labelVenomPrice.Name = "labelVenomPrice";
+            this.labelVenomPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelVenomPrice.TabIndex = 139;
+            // 
+            // labelBloodPrice
+            // 
+            this.labelBloodPrice.AutoSize = true;
+            this.labelBloodPrice.Location = new System.Drawing.Point(645, 331);
+            this.labelBloodPrice.Name = "labelBloodPrice";
+            this.labelBloodPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelBloodPrice.TabIndex = 140;
+            // 
+            // labelBonePrice
+            // 
+            this.labelBonePrice.AutoSize = true;
+            this.labelBonePrice.Location = new System.Drawing.Point(645, 385);
+            this.labelBonePrice.Name = "labelBonePrice";
+            this.labelBonePrice.Size = new System.Drawing.Size(0, 13);
+            this.labelBonePrice.TabIndex = 141;
+            // 
+            // labelScalePrice
+            // 
+            this.labelScalePrice.AutoSize = true;
+            this.labelScalePrice.Location = new System.Drawing.Point(645, 410);
+            this.labelScalePrice.Name = "labelScalePrice";
+            this.labelScalePrice.Size = new System.Drawing.Size(0, 13);
+            this.labelScalePrice.TabIndex = 142;
+            // 
+            // labelClawsPrice
+            // 
+            this.labelClawsPrice.AutoSize = true;
+            this.labelClawsPrice.Location = new System.Drawing.Point(645, 436);
+            this.labelClawsPrice.Name = "labelClawsPrice";
+            this.labelClawsPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelClawsPrice.TabIndex = 143;
+            // 
+            // labelFangsPrice
+            // 
+            this.labelFangsPrice.AutoSize = true;
+            this.labelFangsPrice.Location = new System.Drawing.Point(645, 463);
+            this.labelFangsPrice.Name = "labelFangsPrice";
+            this.labelFangsPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelFangsPrice.TabIndex = 144;
+            // 
+            // labelEctoPrice
+            // 
+            this.labelEctoPrice.AutoSize = true;
+            this.labelEctoPrice.Location = new System.Drawing.Point(645, 494);
+            this.labelEctoPrice.Name = "labelEctoPrice";
+            this.labelEctoPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelEctoPrice.TabIndex = 145;
+            // 
+            // labelMagicPrice
+            // 
+            this.labelMagicPrice.AutoSize = true;
+            this.labelMagicPrice.Location = new System.Drawing.Point(562, 233);
+            this.labelMagicPrice.Name = "labelMagicPrice";
+            this.labelMagicPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelMagicPrice.TabIndex = 146;
+            // 
+            // labelFortunePrice
+            // 
+            this.labelFortunePrice.AutoSize = true;
+            this.labelFortunePrice.Location = new System.Drawing.Point(562, 213);
+            this.labelFortunePrice.Name = "labelFortunePrice";
+            this.labelFortunePrice.Size = new System.Drawing.Size(0, 13);
+            this.labelFortunePrice.TabIndex = 147;
+            // 
+            // labelMightPrice
+            // 
+            this.labelMightPrice.AutoSize = true;
+            this.labelMightPrice.Location = new System.Drawing.Point(562, 366);
+            this.labelMightPrice.Name = "labelMightPrice";
+            this.labelMightPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelMightPrice.TabIndex = 148;
+            // 
+            // labelRItem3
+            // 
+            this.labelRItem3.AutoSize = true;
+            this.labelRItem3.Location = new System.Drawing.Point(319, 210);
+            this.labelRItem3.Name = "labelRItem3";
+            this.labelRItem3.Size = new System.Drawing.Size(0, 13);
+            this.labelRItem3.TabIndex = 149;
+            // 
+            // labelRItem2
+            // 
+            this.labelRItem2.AutoSize = true;
+            this.labelRItem2.Location = new System.Drawing.Point(319, 183);
+            this.labelRItem2.Name = "labelRItem2";
+            this.labelRItem2.Size = new System.Drawing.Size(0, 13);
+            this.labelRItem2.TabIndex = 150;
+            // 
+            // labelRItem1
+            // 
+            this.labelRItem1.AutoSize = true;
+            this.labelRItem1.Location = new System.Drawing.Point(319, 157);
+            this.labelRItem1.Name = "labelRItem1";
+            this.labelRItem1.Size = new System.Drawing.Size(0, 13);
+            this.labelRItem1.TabIndex = 151;
+            // 
+            // labelUniqueGiftPrice
+            // 
+            this.labelUniqueGiftPrice.AutoSize = true;
+            this.labelUniqueGiftPrice.Location = new System.Drawing.Point(223, 91);
+            this.labelUniqueGiftPrice.Name = "labelUniqueGiftPrice";
+            this.labelUniqueGiftPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelUniqueGiftPrice.TabIndex = 152;
+            // 
+            // labelSigilPrice
+            // 
+            this.labelSigilPrice.AutoSize = true;
+            this.labelSigilPrice.Location = new System.Drawing.Point(276, 364);
+            this.labelSigilPrice.Name = "labelSigilPrice";
+            this.labelSigilPrice.Size = new System.Drawing.Size(0, 13);
+            this.labelSigilPrice.TabIndex = 153;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 560);
+            this.ClientSize = new System.Drawing.Size(719, 560);
+            this.Controls.Add(this.labelSigilPrice);
+            this.Controls.Add(this.labelUniqueGiftPrice);
+            this.Controls.Add(this.labelRItem1);
+            this.Controls.Add(this.labelRItem2);
+            this.Controls.Add(this.labelRItem3);
+            this.Controls.Add(this.labelMightPrice);
+            this.Controls.Add(this.labelFortunePrice);
+            this.Controls.Add(this.labelMagicPrice);
+            this.Controls.Add(this.labelEctoPrice);
+            this.Controls.Add(this.labelFangsPrice);
+            this.Controls.Add(this.labelClawsPrice);
+            this.Controls.Add(this.labelScalePrice);
+            this.Controls.Add(this.labelBonePrice);
+            this.Controls.Add(this.labelBloodPrice);
+            this.Controls.Add(this.labelVenomPrice);
+            this.Controls.Add(this.labelDustPrice);
+            this.Controls.Add(this.labelTotemPrice);
+            this.Controls.Add(this.labelGiftLegyPrice);
+            this.Controls.Add(this.labelRunestones);
+            this.Controls.Add(this.labelPrePrice);
+            this.Controls.Add(this.labelLegyPrice);
+            this.Controls.Add(this.labelGoldTotal);
+            this.Controls.Add(this.labelMatsPriceTot);
+            this.Controls.Add(this.labelDungeonName);
+            this.Controls.Add(this.labelMatsItem3Price);
+            this.Controls.Add(this.labelMatsItem2Price);
+            this.Controls.Add(this.labelMatsItem1Price);
+            this.Controls.Add(this.labelMatsItemPrice);
             this.Controls.Add(this.button_load);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.label_runestone_value);
@@ -1076,16 +1330,10 @@
             this.Controls.Add(this.checkBox_fortune);
             this.Controls.Add(this.checkBox_pre);
             this.Controls.Add(this.comboBox_legy);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Smoke\'s Legendary Crafter";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1144,8 +1392,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label_perc;
         private System.Windows.Forms.Button button_calc;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label_runestone_value;
         private System.Windows.Forms.TextBox textBox_runestones;
         private System.Windows.Forms.Label label_runestones;
@@ -1177,12 +1423,38 @@
         private System.Windows.Forms.Label label_recipe_item;
         private System.Windows.Forms.CheckBox checkBox_dungeon_gift;
         private System.Windows.Forms.CheckBox checkBox_recipe_gift;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_load;
-        private System.Windows.Forms.Label label_dungeonname;
+        private System.Windows.Forms.Label labelMatsItemPrice;
+        private System.Windows.Forms.Label labelMatsItem1Price;
+        private System.Windows.Forms.Label labelMatsItem2Price;
+        private System.Windows.Forms.Label labelMatsItem3Price;
+        private System.Windows.Forms.Label labelDungeonName;
+        private System.Windows.Forms.Label labelMatsPriceTot;
+        private System.Windows.Forms.Label labelGoldTotal;
+        private System.Windows.Forms.Label labelLegyPrice;
+        private System.Windows.Forms.Label labelPrePrice;
+        private System.Windows.Forms.Label labelRunestones;
+        private System.Windows.Forms.Label labelGiftLegyPrice;
+        private System.Windows.Forms.Label labelTotemPrice;
+        private System.Windows.Forms.Label labelDustPrice;
+        private System.Windows.Forms.Label labelVenomPrice;
+        private System.Windows.Forms.Label labelBloodPrice;
+        private System.Windows.Forms.Label labelBonePrice;
+        private System.Windows.Forms.Label labelScalePrice;
+        private System.Windows.Forms.Label labelClawsPrice;
+        private System.Windows.Forms.Label labelFangsPrice;
+        private System.Windows.Forms.Label labelEctoPrice;
+        private System.Windows.Forms.Label labelMagicPrice;
+        private System.Windows.Forms.Label labelFortunePrice;
+        private System.Windows.Forms.Label labelMightPrice;
+        private System.Windows.Forms.Label labelRItem3;
+        private System.Windows.Forms.Label labelRItem2;
+        private System.Windows.Forms.Label labelRItem1;
+        private System.Windows.Forms.Label labelUniqueGiftPrice;
+        private System.Windows.Forms.Label labelSigilPrice;
 
 
     }

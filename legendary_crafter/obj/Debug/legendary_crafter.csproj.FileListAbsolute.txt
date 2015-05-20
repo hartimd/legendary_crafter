@@ -17,3 +17,5 @@ C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\bin\legendary_crafter.pd
 C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\obj\Debug\legendary_crafter.exe
 C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\obj\Debug\legendary_crafter.pdb
 C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\obj\Debug\legendary_crafter.csprojResolveAssemblyReference.cache
+C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\bin\Newtonsoft.Json.dll
+C:\Meins\Coding\Cpp\legendary_crafter\legendary_crafter\bin\Newtonsoft.Json.xml

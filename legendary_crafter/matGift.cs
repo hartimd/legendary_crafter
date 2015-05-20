@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace matGift
+namespace legendary_crafter
 {
     /// <summary>
     /// Defines the parameter of the constructors for the Gifts of Materials.
@@ -52,15 +52,39 @@ namespace matGift
             get;
             set;
         }
+
+        public int itemApi
+        {
+            get;
+            set;
+        }
+
+        public int item1Api
+        {
+            get;
+            set;
+        }
+
+        public int item2Api
+        {
+            get;
+            set;
+        }
+
+        public int item3Api
+        {
+            get;
+            set;
+        }
     }
 
     internal static class MatStore
     {
         private static List<matGift> materials = new List<matGift>
         {
-            new matGift{name = "Energy", item = "Pile of Crystalline Dust", item1 = "Pile of Incandescent Dust", item2 = "Pile of Luminous Dust", item3 = "Pile of Radiant Dust"},
-            new matGift{name = "Metal", item = "Darksteel Ingot", item1 = "Mithril Ingot", item2 = "Orichalcum Ingot", item3 = "Platinum Ingot"},
-            new matGift{name = "Wood", item = "Ancient Wood Plank", item1 = "Elder Wood Plank", item2 = "Hard Wood Plank", item3 = "Seasoned Wood Plank"}
+            new matGift{name = "Energy", item = ApiList.GetByAbbr("cryd").name, itemApi = ApiList.GetByAbbr("cryd").id , item1 = ApiList.GetByAbbr("incd").name,  item1Api = ApiList.GetByAbbr("incd").id , item2 = ApiList.GetByAbbr("lumd").name,  item2Api = ApiList.GetByAbbr("lumd").id, item3 = ApiList.GetByAbbr("radd").name, item3Api = ApiList.GetByAbbr("radd").id},
+            new matGift{name = "Metal", item = ApiList.GetByAbbr("dsti").name,  itemApi = ApiList.GetByAbbr("dsti").id, item1 = ApiList.GetByAbbr("miti").name,  item1Api = ApiList.GetByAbbr("miti").id, item2 = ApiList.GetByAbbr("orii").name,  item2Api = ApiList.GetByAbbr("orii").id, item3 = ApiList.GetByAbbr("plai").name, item3Api = ApiList.GetByAbbr("plai").id},
+            new matGift{name = "Wood", item = ApiList.GetByAbbr("anwp").name,  itemApi = ApiList.GetByAbbr("anwp").id, item1 = ApiList.GetByAbbr("elwp").name,  item1Api = ApiList.GetByAbbr("elwp").id, item2 = ApiList.GetByAbbr("hawp").name,  item2Api = ApiList.GetByAbbr("hawp").id, item3 = ApiList.GetByAbbr("sewp").name, item3Api = ApiList.GetByAbbr("sewp").id}
         };
 
         /// <summary>

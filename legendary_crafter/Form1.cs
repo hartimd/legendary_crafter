@@ -1,8 +1,4 @@
-﻿using DungeonGift;
-using legendary;
-using matGift;
-using recipeGift;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -13,9 +9,9 @@ namespace legendary_crafter
     /// </summary>
     partial class Form1 : Form
     {
-        public string input;
+        private string input;
 
-        public string[] legys = { legyList.GetLegy("bifr").name, legyList.GetLegy("bolt").name, legyList.GetLegy("flam").name, legyList.GetLegy("fren").name, legyList.GetLegy("fros").name, legyList.GetLegy("howl").name, legyList.GetLegy("inci").name, legyList.GetLegy("jugg").name, legyList.GetLegy("kamo").name, legyList.GetLegy("krai").name, legyList.GetLegy("kudz").name, legyList.GetLegy("mete").name, legyList.GetLegy("moot").name, legyList.GetLegy("quip").name, legyList.GetLegy("rodg").name, legyList.GetLegy("sunr").name, legyList.GetLegy("drea").name, legyList.GetLegy("mins").name, legyList.GetLegy("pred").name, legyList.GetLegy("twil").name };
+        private Api Api = new Api();
 
         /// <summary>
         /// doubles resulting of the calculation.
@@ -24,6 +20,7 @@ namespace legendary_crafter
         public Form1()
         {
             InitializeComponent();
+            string[] legys = { legyList.GetLegy("bifr").name, legyList.GetLegy("bolt").name, legyList.GetLegy("flam").name, legyList.GetLegy("fren").name, legyList.GetLegy("fros").name, legyList.GetLegy("howl").name, legyList.GetLegy("inci").name, legyList.GetLegy("jugg").name, legyList.GetLegy("kamo").name, legyList.GetLegy("krai").name, legyList.GetLegy("kudz").name, legyList.GetLegy("mete").name, legyList.GetLegy("moot").name, legyList.GetLegy("quip").name, legyList.GetLegy("rodg").name, legyList.GetLegy("sunr").name, legyList.GetLegy("drea").name, legyList.GetLegy("mins").name, legyList.GetLegy("pred").name, legyList.GetLegy("twil").name };
             comboBox_legy.DataSource = legys;
         }
 
@@ -83,20 +80,30 @@ namespace legendary_crafter
         }
 
         private int l_blood = 250;
+        private int priceblood;
         private int l_bone = 250;
+        private int pricebone;
         private int l_claws = 250;
+        private int priceclaws;
         private int l_clover = 77;
         private int l_dust = 250;
+        private int pricedust;
         private int l_ecto = 250;
+        private int priceecto;
         private int l_fangs = 250;
+        private int pricefangs;
         private int l_honor = 500;
         private int l_obsi = 250;
         private int l_runestone = 100;
+        private int pricerunestone;
         private int l_scale = 250;
+        private int pricescale;
         private int l_skill = 200;
         private int l_token = 500;
         private int l_totem = 250;
+        private int pricetotem;
         private int l_venom = 250;
+        private int pricevenom;
 
         /// <summary>
         /// Handles the SelectedIndexChanged event of the comboBox_legy control.
@@ -120,7 +127,7 @@ namespace legendary_crafter
             input = senderCombo.SelectedItem.ToString();
             switch (input)
             {
-                case "The Bifröst":
+                case "The Bifrost":
                     labelCheckBox("bifr");
                     break;
 
@@ -148,11 +155,11 @@ namespace legendary_crafter
                     labelCheckBox("inci");
                     break;
 
-                case "Juggernaught":
+                case "The Juggernaught":
                     labelCheckBox("jugg");
                     break;
 
-                case "Kamohoali":
+                case "Kamohoali i Kotaki":
                     labelCheckBox("kamo");
                     break;
 
@@ -168,7 +175,7 @@ namespace legendary_crafter
                     labelCheckBox("mete");
                     break;
 
-                case "Moot":
+                case "The Moot":
                     labelCheckBox("moot");
                     break;
 
@@ -214,12 +221,22 @@ namespace legendary_crafter
             return temp;
         }
 
+        private int calcPrice(Control tb, int mat, int matprice, Control lab, ref double perc)
+        {
+            int temp = tryParse(tb);
+            perc = toPercent(temp, mat);
+            int price = (mat - temp) * matprice;
+            lab.Text = FormatAsGold(price);
+            return price;
+        }
+
         private void DoCalc()
         {
             double perc_pre = 0;
             if (checkBox_pre.Checked)
             {
                 perc_pre = 100;
+                prePrice = 0;
             }
             double perc_bloodstone = toPercent(tryParse(textBox_skillpoint), l_skill);
             if (checkBox_bloodstone.Checked)
@@ -242,67 +259,106 @@ namespace legendary_crafter
             {
                 perc_mastery = 100;
             }
-            double perc_totem = toPercent(tryParse(textBox_totem), mats_item_value);
-            double perc_dust = toPercent(tryParse(textBox_dust), mats_item_value);
-            double perc_venom = toPercent(tryParse(textBox_venom), mats_item_value);
-            double perc_blood = toPercent(tryParse(textBox_blood), mats_item_value);
+            double perc_totem = 0;
+            int totemPrice = calcPrice(textBox_totem, mats_item_value, pricetotem, labelTotemPrice, ref perc_totem);
+            double perc_dust = 0;
+            int dustPrice = calcPrice(textBox_dust, mats_item_value, pricedust, labelDustPrice, ref perc_dust);
+            double perc_venom = 0;
+            int venomPrice = calcPrice(textBox_venom, mats_item_value, pricevenom, labelVenomPrice, ref perc_venom);
+            double perc_blood = 0;
+            int bloodPrice = calcPrice(textBox_blood, mats_item_value, priceblood, labelBloodPrice, ref perc_blood);
             double perc_magic = sumDivide(perc_totem, perc_dust, perc_venom, perc_blood);
+            int magicPrice = totemPrice + venomPrice + dustPrice + bloodPrice;
             if (checkBox_magic.Checked)
             {
                 perc_magic = 100;
+                magicPrice = 0;
             }
-            double perc_bone = toPercent(tryParse(textBox_bone), mats_item_value);
-            double perc_scale = toPercent(tryParse(textBox_scale), mats_item_value);
-            double perc_claws = toPercent(tryParse(textBox_claws), mats_item_value);
-            double perc_fangs = toPercent(tryParse(textBox_fangs), mats_item_value);
+            labelMagicPrice.Text = FormatAsGold(magicPrice);
+            double perc_bone = 0;
+            int bonePrice = calcPrice(textBox_bone, mats_item_value, pricebone, labelBonePrice, ref perc_bone);
+            double perc_scale = 0;
+            int scalePrice = calcPrice(textBox_scale, mats_item_value, pricescale, labelScalePrice, ref perc_scale);
+            double perc_claws = 0;
+            int clawsPrice = calcPrice(textBox_claws, mats_item_value, priceclaws, labelClawsPrice, ref perc_claws);
+            double perc_fangs = 0;
+            int fangsPrice = calcPrice(textBox_fangs, mats_item_value, pricefangs, labelFangsPrice, ref perc_fangs);
             double perc_might = sumDivide(perc_bone, perc_scale, perc_claws, perc_fangs);
+            int mightPrice = bonePrice + scalePrice + clawsPrice + fangsPrice;
             if (checkBox_might.Checked)
             {
                 perc_might = 100;
+                mightPrice = 0;
             }
-            double perc_ecto = toPercent(tryParse(textBox_ecto), mats_item_value);
+            labelMightPrice.Text = FormatAsGold(mightPrice);
+            double perc_ecto = 0;
+            int ectoprice = calcPrice(textBox_ecto, mats_item_value, priceecto, labelEctoPrice, ref perc_ecto);
             double perc_clover = toPercent(tryParse(textBox_clover), l_clover);
             double perc_fortune = sumDivide(perc_magic, perc_might, perc_ecto, perc_clover);
+            int fortunePrice = magicPrice + mightPrice + ectoprice;
             if (checkBox_fortune.Checked)
             {
                 perc_fortune = 100;
+                fortunePrice = 0;
             }
+            labelFortunePrice.Text = FormatAsGold(fortunePrice);
             double perc_dungeon = toPercent(tryParse(textBox_token), l_token);
             if (checkBox_dungeon_gift.Checked)
             {
                 perc_dungeon = 100;
             }
-            double perc_ritem1 = toPercent(tryParse(textBox_recipe_item), l_ritem);
-            double perc_ritem2 = toPercent(tryParse(textBox_recipe_item1), l_ritem1);
-            double perc_ritem3 = toPercent(tryParse(textBox_recipe_item2), l_ritem2);
+            double perc_ritem1 = 0;
+            int ritem1Price = calcPrice(textBox_recipe_item, l_ritem, ritem1price, labelRItem1, ref perc_ritem1);
+            double perc_ritem2 = 0;
+            int ritem2Price = calcPrice(textBox_recipe_item1, l_ritem1, ritem2price, labelRItem2, ref perc_ritem2);
+            double perc_ritem3 = 0;
+            int ritem3Price = calcPrice(textBox_recipe_item2, l_ritem2, ritem3price, labelRItem3, ref perc_ritem3);
+            int uniqueGiftPrice = ritem1Price + ritem2Price + ritem3Price;
             double perc_recipe = sumDivide(perc_dungeon, perc_ritem1, perc_ritem2, perc_ritem3);
             if (checkBox_recipe_gift.Checked)
             {
                 perc_recipe = 100;
+                uniqueGiftPrice = 0;
             }
-            double perc_mitem1 = toPercent(tryParse(textBox_mats_item), mats_item_value);
-            double perc_mitem2 = toPercent(tryParse(textBox_mats_item1), mats_item_value);
-            double perc_mitem3 = toPercent(tryParse(textBox_mats_item2), mats_item_value);
-            double perc_mitem4 = toPercent(tryParse(textBox_mats_item3), mats_item_value);
+            labelUniqueGiftPrice.Text = FormatAsGold(uniqueGiftPrice);
+            double perc_mitem1 = 0;
+            int mitem1Price = calcPrice(textBox_mats_item, mats_item_value, mitem1price, labelMatsItemPrice, ref perc_mitem1);
+            double perc_mitem2 = 0;
+            int mitem2Price = calcPrice(textBox_mats_item1, mats_item_value, mitem2price, labelMatsItem1Price, ref perc_mitem2);
+            double perc_mitem3 = 0;
+            int mitem3Price = calcPrice(textBox_mats_item2, mats_item_value, mitem3price, labelMatsItem2Price, ref perc_mitem3);
+            double perc_mitem4 = 0;
+            int mitem4Price = calcPrice(textBox_mats_item3, mats_item_value, mitem4price, labelMatsItem3Price, ref perc_mitem4);
+            int matsTotal = mitem1Price + mitem2Price + mitem3Price + mitem4Price;
             double perc_mats = sumDivide(perc_mitem1, perc_mitem2, perc_mitem3, perc_mitem4);
             if (checkBox_mats_gift.Checked)
             {
                 perc_mats = 100;
+                matsTotal = 0;
             }
+            labelMatsPriceTot.Text = FormatAsGold(matsTotal);
             double perc_sigil = 0;
+
             if (checkBox_sigil.Checked)
             {
                 perc_sigil = 100;
+                sigilPrice = 0;
             }
-            double perc_runestones = toPercent(tryParse(textBox_runestones), l_runestone);
+            double perc_runestones = 0;
+            int runestonePrice = calcPrice(textBox_runestones, l_runestone, pricerunestone, labelRunestones, ref perc_runestones);
             double perc_legy = sumDivide(perc_recipe, perc_mats, perc_sigil, perc_runestones);
             if (checkBox_gift.Checked)
             {
                 perc_legy = 100;
             }
+            int giftLegyPrice = matsTotal + runestonePrice + uniqueGiftPrice;
+            labelGiftLegyPrice.Text = FormatAsGold(giftLegyPrice);
             double perc_tot = sumDivide(perc_pre, perc_mastery, perc_fortune, perc_legy);
             label_perc.Text = perc_tot.ToString() + " %";
+            labelGoldTotal.Text = FormatAsGold(prePrice + giftLegyPrice + fortunePrice);
         }
+
+        private int prePrice, sigilPrice;
 
         /// <summary>
         /// Sets the labels specific of the legendary.
@@ -310,35 +366,43 @@ namespace legendary_crafter
         /// <param name="id">Gets the identifiator of the legendary.</param>
         private void labelCheckBox(string id)
         {
-            checkBox_pre.Text = legyList.GetLegy(id).pre;
-            checkBox_gift.Text = "Gift of" + legyList.GetLegy(id).name;
-            checkBox_recipe_gift.Text = recipeBook.GetByID(legyList.GetLegy(id).recipeGift).name;
-            setDungeon(recipeBook.GetByID(legyList.GetLegy(id).recipeGift).dungeonGift);
-            labelMats(legyList.GetLegy(id).matsGift);
-            labelRecipe(legyList.GetLegy(id).recipeGift);
-            checkBox_sigil.Text = "Superior Sigil of " + legyList.GetLegy(id).sigil;
+            legy legy = legyList.GetLegy(id);
+            labelLegyPrice.Text = FormatAsGold(Api.GetSellPrice(legy.api));
+            checkBox_pre.Text = legy.pre;
+            prePrice = Api.GetSellPrice(legy.preapi);
+            labelPrePrice.Text = FormatAsGold(prePrice);
+            sigilPrice = Api.GetSellPrice(legy.sigilapi);
+            labelSigilPrice.Text = FormatAsGold(sigilPrice);
+            checkBox_gift.Text = "Gift of" + legy.name;
+            checkBox_recipe_gift.Text = recipeBook.GetByID(legy.recipeGift).name;
+            setDungeon(recipeBook.GetByID(legy.recipeGift).dungeonGift);
+            labelMats(legy.matsGift);
+            labelRecipe(legy.recipeGift);
+            checkBox_sigil.Text = "Superior Sigil of " + legy.sigil;
         }
 
-        /// <summary>
-        /// Sets the <c>Label.Text</c> to the value taken from the data base.
-        /// </summary>
-        /// <param name="name">Value of the specific label.</param>
+        private int mitem1price, mitem2price, mitem3price, mitem4price;
+
         private void labelMats(string name)
         {
-            checkBox_mats_gift.Text = "Gift of " + MatStore.GetByName(name).name;
-            label_mats_item.Text = MatStore.GetByName(name).item;
+            matGift material = MatStore.GetByName(name);
+            checkBox_mats_gift.Text = "Gift of " + material.name;
+            label_mats_item.Text = material.item;
             label_mats_item_value.Text = mats_item_value.ToString();
-            label_mats_item1.Text = MatStore.GetByName(name).item1;
+            mitem1price = Api.GetSellPrice(material.itemApi);
+            label_mats_item1.Text = material.item1;
             label_mats_item1_value.Text = mats_item_value.ToString();
-            label_mats_item2.Text = MatStore.GetByName(name).item2;
+            mitem2price = Api.GetSellPrice(material.item1Api);
+            label_mats_item2.Text = material.item2;
             label_mats_item2_value.Text = mats_item_value.ToString();
-            label_mats_item3.Text = MatStore.GetByName(name).item3;
+            mitem3price = Api.GetSellPrice(material.item2Api);
+            label_mats_item3.Text = material.item3;
             label_mats_item3_value.Text = mats_item_value.ToString();
+            mitem4price = Api.GetSellPrice(material.item3Api);
         }
 
-        public int l_ritem;
-        public int l_ritem1;
-        public int l_ritem2;
+        private int l_ritem, l_ritem1, l_ritem2;
+        private int ritem1price, ritem2price, ritem3price;
 
         /// <summary>
         /// Sets the <c>Label.Text</c> to the value taken from the data base.
@@ -346,15 +410,19 @@ namespace legendary_crafter
         /// <param name="id">Identifier of the specific label.</param>
         private void labelRecipe(string id)
         {
-            l_ritem = recipeBook.GetByID(id).item_value;
-            l_ritem1 = recipeBook.GetByID(id).item1_value;
-            l_ritem2 = recipeBook.GetByID(id).item2_value;
-            label_recipe_item.Text = recipeBook.GetByID(id).item;
+            recipeGift recipe = recipeBook.GetByID(id);
+            l_ritem = recipe.item_value;
+            l_ritem1 = recipe.item1_value;
+            l_ritem2 = recipe.item2_value;
+            label_recipe_item.Text = recipe.item;
             label_recipe_item_value.Text = l_ritem.ToString();
-            label_recipe_item1.Text = recipeBook.GetByID(id).item1;
+            ritem1price = Api.GetSellPrice(recipe.itemApi);
+            label_recipe_item1.Text = recipe.item1;
             label_recipe_item1_value.Text = l_ritem1.ToString();
-            label_recipe_item2.Text = recipeBook.GetByID(id).item2;
+            ritem2price = Api.GetSellPrice(recipe.item1Api);
+            label_recipe_item2.Text = recipe.item2;
             label_recipe_item2_value.Text = l_ritem2.ToString();
+            ritem3price = Api.GetSellPrice(recipe.item2Api);
         }
 
         /// <summary>
@@ -364,7 +432,7 @@ namespace legendary_crafter
         private void setDungeon(string Abbr)
         {
             checkBox_dungeon_gift.Text = DungeonStore.GetByCode(Abbr).name;
-            label_dungeonname.Text = DungeonStore.GetByCode(Abbr).dungeon;
+            labelDungeonName.Text = DungeonStore.GetByCode(Abbr).dungeon;
             label_token.Text = DungeonStore.GetByCode(Abbr).token;
         }
 
@@ -436,6 +504,26 @@ namespace legendary_crafter
             {
                 item.Key.Text = item.Value.ToString();
             }
+
+            priceblood = Api.GetSellPrice(ApiList.GetByAbbr("vpbl").id);
+            pricebone = Api.GetSellPrice(ApiList.GetByAbbr("anbo").id);
+            priceclaws = Api.GetSellPrice(ApiList.GetByAbbr("vicl").id);
+            pricedust = Api.GetSellPrice(ApiList.GetByAbbr("cryd").id);
+            priceecto = Api.GetSellPrice(ApiList.GetByAbbr("ecto").id);
+            pricefangs = Api.GetSellPrice(ApiList.GetByAbbr("vifa").id);
+            pricerunestone = 10000;
+            pricescale = Api.GetSellPrice(ApiList.GetByAbbr("arsc").id);
+            pricetotem = Api.GetSellPrice(ApiList.GetByAbbr("elto").id);
+            pricevenom = Api.GetSellPrice(ApiList.GetByAbbr("pove").id);
+        }
+
+        private string FormatAsGold(int p)
+        {
+            var gold = Rounding.RoundDown(p / 10000, 0);
+            var silver = Rounding.RoundDown((p - (10000 * gold)) / 100, 0);
+            var copper = (p - (10000 * gold) - (100 * silver));
+            //return gold + _rm.GetString("gold", _cul) + " " + silver + _rm.GetString("silver", _cul) + " " + copper + _rm.GetString("copper", _cul);
+            return gold + "g " + silver + "s " + copper + "c";
         }
     }
 }
